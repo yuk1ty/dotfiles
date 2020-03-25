@@ -3,8 +3,7 @@
 brew update
 brew upgrade
 
-brew cask install iterm2
-brew cask install alfred
+# platform
 brew cask install slack
 brew cask install docker
 
@@ -16,7 +15,12 @@ brew install fd
 brew install ripgrep
 brew install procs
 
-# tools
+# mac tools
+brew cask install alfred
+brew cask install iterm2
+brew cask install ngrok
+
+# development tools
 brew install make
 brew install bazel
 brew install gcc
@@ -28,6 +32,7 @@ brew install kubernetes-cli
 brwe install kubesec
 
 # languages
+brew install jenv
 brew install go
 
 # aws
