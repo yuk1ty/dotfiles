@@ -53,6 +53,7 @@ brew install starship
 
 # others
 brew install openssh
+brew install filosottile/musl-cross/musl-cross
 brew cask install chromium
 brew cask install firefox
 brew cask install karabiner-elements
