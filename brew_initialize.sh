@@ -7,6 +7,7 @@ brew cask upgrade
 # platform
 brew cask install slack
 brew cask install docker
+brew install docker-compose
 
 # commands
 brew install bat
