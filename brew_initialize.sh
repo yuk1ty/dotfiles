@@ -21,6 +21,13 @@ brew install procs
 brew cask install alfred
 brew cask install iterm2
 brew cask install ngrok
+brew cask install visual-studio-code
+brew cask install adobe-creative-cloud
+brew cask install caffeine
+brew cask install intellij-idea
+brew cask install clion
+brew cask install goland
+brew cask install datagrip
 
 # development tools
 brew install make
