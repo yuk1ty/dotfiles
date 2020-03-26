@@ -43,6 +43,7 @@ brwe install kubesec
 # languages
 brew install jenv
 brew install go
+brew install node
 
 # aws
 brew install aws-iam-authenticator
@@ -54,7 +55,6 @@ brew install starship
 brew install openssh
 brew cask install chromium
 brew cask install firefox
-brew cask install firefoxnightly
 brew cask install karabiner-elements
 
 brew cleanup
