@@ -28,6 +28,7 @@ brew cask install intellij-idea
 brew cask install clion
 brew cask install goland
 brew cask install datagrip
+brew cask install tableplus
 
 # development tools
 brew install make
