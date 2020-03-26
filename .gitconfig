@@ -1,0 +1,12 @@
+[alias]
+aa = add .
+ba = branch -a
+c = checkout
+cb = checkout -b
+cm = commit -m
+cam = commit --amend
+st = status
+f = fetch
+r = rebase
+lo = log --oneline
+po = push origin/HEAD

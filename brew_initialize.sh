@@ -2,6 +2,7 @@
 
 brew update
 brew upgrade
+brew cask upgrade
 
 # platform
 brew cask install slack
@@ -43,5 +44,9 @@ brew install starship
 
 # others
 brew install openssh
+brew cask install chromium
+brew cask install firefox
+brew cask install firefoxnightly
+brew cask install karabiner-elements
 
 brew cleanup
