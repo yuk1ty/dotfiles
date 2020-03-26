@@ -2,12 +2,20 @@ version: "3.7"
 services:
   redis:
     image: redis:latest
+    ports:
+      - "6379:6379"
 
   mysql5:
     image: mysql:5.7.29
+    ports:
+      - "3306:3306"
 
   memcached:
     image: memcached:latest
+    ports:
+      - "11211:11211"
 
   dynamodb:
     image: amazon/dynamodb-local:latest
+    ports:
+      - "8000:8000"
