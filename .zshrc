@@ -1,3 +1,5 @@
+eval "$(starship init zsh)"
+
 setopt IGNOREEOF
 export LANG=ja_JP.UTF-8
 

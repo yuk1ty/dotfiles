@@ -1,0 +1,46 @@
+add_newline = false
+
+[git_branch]
+symbol = "🌱 "
+truncation_length = 4
+truncation_symbol = ""
+
+[git_state]
+progress_divider = " of "
+cherry_pick = "🍒 PICKING"
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged.value = "++"
+staged.style = "green"
+staged_count.enabled = true
+staged_count.style = "green"
+renamed = "👅"
+deleted = "🗑"
+
+[rust]
+symbol = "🦀 "
+style = "bold red"
+
+[python]
+symbol = "👾 "
+pyenv_version_name = true
+pyenv_prefix = "foo "
+
+[nodejs]
+symbol = "🤖 "
+
+[kubernetes]
+symbol = "⛵ "
+style = "dimmed green"
+disabled = false
+
+[golang]
+symbol = "🐹 "
+style = "bold cyan"	
