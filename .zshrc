@@ -21,9 +21,9 @@ setopt correct
 
 alias cat='bat'
 alias ls='exa'
-alias ll='exa --long --header --git'
+alias ll='exa -la'
 alias grep='rg'
 alias hex='hexyl'
-alias ps='procs'
+alias prs='procs'
 alias start='docker-compose -f ~/dotfiles/docker-compose.yml up -d'
 alias start build='docker-compose -f ~/dotfiles/docker-compose.yml up --build -d'

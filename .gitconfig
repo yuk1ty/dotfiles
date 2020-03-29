@@ -10,6 +10,7 @@ f = fetch
 r = rebase
 lo = log --oneline
 po = push origin/HEAD
+
 [user]
 	name = yytyd
 	email = toyoda_yuki@cyberagent.co.jp
