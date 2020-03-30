@@ -45,6 +45,11 @@ brwe install kubesec
 brew install jenv
 brew install go
 brew install node
+brew tap AdoptOpenJDK/openjdk
+brew cask install adoptopenjdk8
+brew cask install adoptopenjdk11
+brew cask install adoptopenjdk14
+brew install sbt
 
 # aws
 brew install aws-iam-authenticator

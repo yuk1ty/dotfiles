@@ -1,4 +1,5 @@
 eval "$(starship init zsh)"
+eval "$(jenv init -)"
 
 setopt IGNOREEOF
 export LANG=ja_JP.UTF-8
