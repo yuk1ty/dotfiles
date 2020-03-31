@@ -2,22 +2,35 @@ version: "3.7"
 services:
   redis:
     image: redis:latest
+    volumes:
+      - ~/.local/redis-data:/var/lib/redis
+    restart: always
     ports:
       - "6379:6379"
 
   mysql5:
     image: mysql:5.7.29
+    command: [--default-authentication-plugin=mysql_native_password, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --innodb-large-prefix=true, --innodb_file_per_table=true, --innodb-file-format=Barracuda]
     ports:
       - "3306:3306"
+    volumes:
+      - ~/.local/mysql-data:/var/lib/mysql
+    restart: always
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
 
   memcached:
     image: memcached:latest
+    restart: always
+    volumes:
+      - ~/.local/memcached-data:/var/lib/memcached
     ports:
       - "11211:11211"
 
   dynamodb:
     image: amazon/dynamodb-local:latest
+    restart: always
+    volumes:
+      - ~/.local/dynamodb-data:/var/lib/dynamodb
     ports:
       - "8000:8000"
