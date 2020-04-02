@@ -9,7 +9,7 @@ st = status
 f = fetch
 r = rebase
 lo = log --oneline
-po = push origin/HEAD
+po = push origin HEAD
 
 [user]
 	name = yytyd

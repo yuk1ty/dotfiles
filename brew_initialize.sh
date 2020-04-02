@@ -49,6 +49,7 @@ brew tap AdoptOpenJDK/openjdk
 brew cask install adoptopenjdk8
 brew cask install adoptopenjdk11
 brew cask install adoptopenjdk14
+brew cask install visualvm
 brew install sbt
 
 # aws
