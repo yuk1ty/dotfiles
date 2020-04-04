@@ -16,6 +16,8 @@ brew install hexyl
 brew install fd
 brew install ripgrep
 brew install procs
+brew tap cjbassi/ytop
+brew install ytop
 
 # mac tools
 brew cask install alfred
@@ -36,6 +38,7 @@ brew install bazel
 brew install gcc
 brew install ansible
 brew install jq
+brew install peco
 
 # kubernetes
 brew install kubernetes-cli

@@ -10,6 +10,7 @@ f = fetch
 r = rebase
 lo = log --oneline
 po = push origin HEAD
+pf = push -f origin HEAD
 
 [user]
 	name = yytyd
