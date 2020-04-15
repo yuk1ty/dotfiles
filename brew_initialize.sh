@@ -39,6 +39,7 @@ brew install gcc
 brew install ansible
 brew install jq
 brew install peco
+brew install gibo
 
 # kubernetes
 brew install kubernetes-cli
