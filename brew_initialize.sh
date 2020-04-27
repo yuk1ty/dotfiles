@@ -66,6 +66,8 @@ brew install starship
 brew install openssh
 brew install filosottile/musl-cross/musl-cross
 brew cask install chromium
+brew tap homebrew/cask-versions
+brew cask install google-chrome-canary
 brew cask install firefox
 brew cask install karabiner-elements
 
