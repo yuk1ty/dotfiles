@@ -55,6 +55,7 @@ brew cask install adoptopenjdk11
 brew cask install adoptopenjdk14
 brew cask install visualvm
 brew install sbt
+brew install pyenv
 
 # aws
 brew install aws-iam-authenticator
