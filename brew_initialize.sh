@@ -8,7 +8,6 @@ update_brew() {
     echo "Done!"
 }
 
-# commands
 install_rust_wrap_commands() {
     # I love to use linux commands rewrite by Rust
     brew install bat
@@ -21,7 +20,6 @@ install_rust_wrap_commands() {
     brew install ytop
 }
 
-# mac tools
 install_mac_desktop_tools() {
     brew cask install alfred
     brew cask install iterm2
@@ -43,7 +41,6 @@ install_mac_desktop_tools() {
     brew cask install karabiner-elements
 }
 
-# development tools
 install_deveploer_tools() {
     brew install make
     brew install bazel
@@ -60,11 +57,11 @@ install_deveploer_tools() {
     brew install docker-compose
 }
 
-# languages
 install_programming_languages() {
     brew install jenv
     brew install go
     brew install node
+    brew install deno
     brew tap AdoptOpenJDK/openjdk
     brew cask install adoptopenjdk8
     brew cask install adoptopenjdk11
@@ -73,7 +70,7 @@ install_programming_languages() {
     brew install sbt
     brew install pyenv
 }
-# prompt
+
 install_prompt_tools() {
     brew install starship
 }
@@ -88,7 +85,7 @@ do
     if [ -z $VAR ]; then
         echo "Please input a number aside word"
         break
-    filosottile
+    fi
 
     if [ $VAR = update ]; then
         update_brew
@@ -105,7 +102,7 @@ do
     elif [ $VAR = programming_language ]; then
         install_programming_languages
         break
-    elif [ $VAR = install_prompt_tools ]; then
+    elif [ $VAR = prompt ]; then
         install_prompt_tools
         break
     elif [ $VAR = all ]; then
