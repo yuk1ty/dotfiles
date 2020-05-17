@@ -21,6 +21,7 @@ install_rust_wrap_commands() {
 }
 
 install_mac_desktop_tools() {
+    # install mac desktop apps
     brew cask install alfred
     brew cask install iterm2
     brew cask install ngrok
@@ -42,6 +43,7 @@ install_mac_desktop_tools() {
 }
 
 install_deveploer_tools() {
+    # install developing tools
     brew install make
     brew install bazel
     brew install gcc
@@ -58,6 +60,7 @@ install_deveploer_tools() {
 }
 
 install_programming_languages() {
+    # install programming languages
     brew install jenv
     brew install go
     brew install node
@@ -72,6 +75,7 @@ install_programming_languages() {
 }
 
 install_prompt_tools() {
+    # install prompt tools
     brew install starship
 }
 
@@ -116,6 +120,7 @@ do
     else
         echo "Unknown choice"
         break
+    fi
 done
 
 after_installing
