@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTPATH=~/dotfiles
+DOTPATH=(eval $pwd)
 
 for f in .??*
 do
