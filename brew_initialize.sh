@@ -57,6 +57,7 @@ install_deveploer_tools() {
     brew install openssh
     brew install filosottile/musl-cross/musl-cross
     brew install docker-compose
+    brew install awscli
 }
 
 install_programming_languages() {
