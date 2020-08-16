@@ -6,6 +6,11 @@ install_rust() {
     curl https://sh.rustup.rs -sSf | sh
 }
 
+# install WebAssembly tools
+install_webasm() {
+    curl https://raw.githubusercontent.com/second-state/ssvmup/master/installer/init.sh -sSf | sh
+}
+
 # set paths and install multiple Java versions for jenv
 install_java() {
     echo "Starting to install multiple java versions for jenv"
@@ -22,7 +27,7 @@ install_python() {
 }
 
 # main script
-select VAR in rust java python all exit
+select VAR in rust webasm java python all exit
 do
     if [ -z $VAR ]; then
         echo "Please input a number aside word"
@@ -32,6 +37,9 @@ do
     if [ $VAR = rust ]; then
         install_rust 
         break
+    elif [ $VAR = webasm ]; then
+        install_webasm
+        break
     elif [ $VAR = java ]; then
         install_java
         break
@@ -40,6 +48,7 @@ do
         break
     elif [ $VAR = all ]; then
         install_rust
+        install_webasm
         install_java
         install_python
         break

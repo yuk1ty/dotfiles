@@ -58,6 +58,7 @@ install_deveploer_tools() {
     brew install filosottile/musl-cross/musl-cross
     brew install docker-compose
     brew install awscli
+    brew install terraform
 }
 
 install_programming_languages() {
