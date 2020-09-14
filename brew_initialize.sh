@@ -61,6 +61,7 @@ install_deveploer_tools() {
     brew install terraform
     brew install llvm@10
     brew install git-secrets
+    brew install tig
 }
 
 install_programming_languages() {
