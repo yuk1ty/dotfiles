@@ -59,6 +59,8 @@ install_deveploer_tools() {
     brew install docker-compose
     brew install awscli
     brew install terraform
+    brew install llvm@10
+    brew install git-secrets
 }
 
 install_programming_languages() {
