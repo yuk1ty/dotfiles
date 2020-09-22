@@ -26,6 +26,7 @@ alias ll='exa -la'
 alias grep='rg'
 alias hex='hexyl'
 alias prs='procs'
+alias gl='tig'
 alias start='docker-compose -f ~/dotfiles/docker-compose.yml up -d'
 alias awsc='ssh $(grep -w Host ~/.ssh/*.conf | awk '\''{print $2}'\'' | peco)'
 

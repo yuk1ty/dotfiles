@@ -45,6 +45,8 @@ install_mac_desktop_tools() {
 install_deveploer_tools() {
     # install developing tools
     brew install make
+    brew install cmake
+    brew install ninja
     brew install bazel
     brew install gcc
     brew install ansible
