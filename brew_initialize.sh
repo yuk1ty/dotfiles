@@ -32,6 +32,7 @@ install_mac_desktop_tools() {
     brew cask install clion
     brew cask install goland
     brew cask install datagrip
+    brew cask install pycharm
     brew cask install tableplus
     brew cask install slack
     brew cask install docker
@@ -44,6 +45,7 @@ install_mac_desktop_tools() {
 
 install_deveploer_tools() {
     # install developing tools
+    brew install ansible
     brew install make
     brew install cmake
     brew install ninja
