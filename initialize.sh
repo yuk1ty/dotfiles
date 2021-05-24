@@ -9,6 +9,7 @@ install_rust() {
 # install WebAssembly tools
 install_webasm() {
     curl https://raw.githubusercontent.com/second-state/ssvmup/master/installer/init.sh -sSf | sh
+    curl https://get.wasmer.io -sSfL | sh
 }
 
 # set paths and install multiple Java versions for jenv

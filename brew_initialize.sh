@@ -41,6 +41,8 @@ install_mac_desktop_tools() {
     brew cask install google-chrome-canary
     brew cask install firefox
     brew cask install karabiner-elements
+    brew cask install 1password
+    brew install --cask clipy
 }
 
 install_deveploer_tools() {
@@ -53,6 +55,7 @@ install_deveploer_tools() {
     brew install gcc
     brew install ansible
     brew install jq
+    brew install gh
     brew install peco
     brew install gibo
     brew install kubesec
@@ -63,9 +66,17 @@ install_deveploer_tools() {
     brew install docker-compose
     brew install awscli
     brew install terraform
+    brew install tfenv
     brew install llvm@10
     brew install git-secrets
     brew install tig
+    brew install gitui
+    brew install qemu
+    brew install postgresql
+    brew tap versent/homebrew-taps
+    brew install saml2aws
+    brew install grpcurl
+    brew install terraformer
 }
 
 install_programming_languages() {
@@ -81,6 +92,9 @@ install_programming_languages() {
     brew cask install visualvm
     brew install sbt
     brew install pyenv
+    brew install cabal-install
+    brew install idris
+    brew install zig
 }
 
 install_prompt_tools() {
