@@ -77,6 +77,7 @@ install_deveploer_tools() {
     brew install saml2aws
     brew install grpcurl
     brew install terraformer
+    brew install htop
 }
 
 install_programming_languages() {
