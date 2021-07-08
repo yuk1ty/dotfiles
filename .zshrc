@@ -31,8 +31,8 @@ alias hex='hexyl'
 alias prs='procs'
 alias gl='tig'
 alias start='docker-compose -f ~/dotfiles/docker-compose.yml up -d'
-alias awsc='ssh $(grep -w Host ~/.ssh/*.conf | awk '\''{print $2}'\'' | peco)'
-alias saml='saml2aws login -a airtrack-admin'
+alias awsc='ssh $(grep -w Host ~/.ssh/config | awk '\''{print $2}'\'' | peco)'
+alias saml='saml2aws login -a conv-dev'
 
 PATH=$PATH:/opt/riscv/bin
 PATH="/usr/local/opt/llvm@10/bin:$PATH"
