@@ -1,0 +1,50 @@
+eval "$(starship init zsh)"
+eval "$(jenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+setopt IGNOREEOF
+export LANG=ja_JP.UTF-8
+
+autoload -Uz colors
+colors
+
+autoload -Uz compinit
+compinit
+
+setopt share_history
+
+setopt histignorealldups
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt correct
+
+alias cat='bat'
+alias ls='exa'
+alias ll='exa -la'
+alias grep='rg'
+alias hex='hexyl'
+alias prs='procs'
+alias gl='tig'
+alias awsc='ssh $(grep -w Host ~/.ssh/config | awk '\''{print $2}'\'' | peco) -v'
+alias setup-aws='sh ~/dotfiles/scripts/setup-aws.sh'
+
+PATH=$PATH:/opt/riscv/bin
+PATH="/usr/local/opt/llvm@10/bin:$PATH"
+PATH="$HOME/.cabal/bin:$PATH"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+[[ -f /Users/a14926/.npm/_npx/6913fdfd1ea7a741/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/a14926/.npm/_npx/6913fdfd1ea7a741/node_modules/tabtab/.completions/electron-forge.zsh
+export WASMER_DIR="/Users/a14926/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+export PATH="$HOME/.serverless/bin:$PATH"
+# export PATH="$HOME/bin:$PATH"
+# export DOCKER_HOST='tcp://127.0.0.1:2375'
+export PATH="/Users/a14926/.deno/bin:$PATH"
+export HOMEBREW_NO_AUTO_UPDATE=1
