@@ -30,6 +30,9 @@ symbol = "👾 "
 pyenv_version_name = true
 pyenv_prefix = "foo "
 
+[scala]
+symbol = "🌟 "
+
 [nodejs]
 symbol = "🤖 "
 
