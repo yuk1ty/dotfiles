@@ -1,0 +1,39 @@
+[alias]
+aa = add .
+ba = branch -a
+c = checkout
+cb = checkout -b
+cm = commit -m
+cam = commit --amend
+st = status
+f = fetch
+r = rebase
+lo = log --oneline
+po = push origin HEAD
+pf = push -f origin HEAD
+
+[user]
+    name = yuk1ty
+    email = yuk1ty@users.noreply.github.com
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    side-by-side = true
+    line-numbers = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
