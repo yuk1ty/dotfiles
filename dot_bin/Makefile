@@ -1,7 +1,7 @@
 all: init setup
 
 init:
-    sh init.sh
+	sh init.sh
 
 setup:
-    sh mac_setup.sh
+	sh mac_setup.sh
