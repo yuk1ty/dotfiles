@@ -31,7 +31,6 @@ alias hex='hexyl'
 alias prs='procs'
 alias gl='tig'
 alias awsc='ssh $(grep -w Host ~/.ssh/config | awk '\''{print $2}'\'' | peco) -v'
-alias setup-aws='sh ~/scripts/setup-aws.sh'
 
 PATH=$PATH:/opt/riscv/bin
 PATH="/usr/local/opt/llvm@10/bin:$PATH"
@@ -40,8 +39,6 @@ PATH="$HOME/.cabal/bin:$PATH"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-export WASMER_DIR="$HOME/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 export PATH="$HOME/.serverless/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
 export HOMEBREW_NO_AUTO_UPDATE=1
