@@ -42,3 +42,4 @@ pf = push --force-with-lease origin HEAD
 
 [diff]
     colorMoved = default
+

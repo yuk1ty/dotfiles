@@ -13,4 +13,4 @@ jobs:
 
       - name: Set MacOS.
         run: make
-        working-directory: ./.bin
+        working-directory: dot_bin
