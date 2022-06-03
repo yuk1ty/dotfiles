@@ -41,4 +41,10 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 export PATH="$HOME/.serverless/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
+
+// env
+
+// run `brew` command without any updates
 export HOMEBREW_NO_AUTO_UPDATE=1
+// for cargo, to be able to access crates on GitHub
+export CARGO_NET_GIT_FETCH_WITH_CLI=true
