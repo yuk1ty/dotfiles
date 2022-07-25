@@ -34,8 +34,7 @@ alias prs='procs'
 alias gl='tig'
 alias awsc='ssh $(grep -w Host ~/.ssh/config | awk '\''{print $2}'\'' | peco) -v'
 alias k='kubectl'
-alias kuc='kubectl config use-context'
-alias kgc='kubectl config get-contexts'
+alias kc='kubectx | peco | xargs kubectx'
 
 # PATH
 
@@ -49,6 +48,8 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 export PATH="$HOME/.serverless/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.pyenv/shims:$PATH"
 
 # env
 
