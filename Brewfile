@@ -122,3 +122,6 @@ cask "slack"
 cask "tableplus"
 cask "visual-studio-code"
 cask "xquartz"
+
+# App Store
+mas 'Focus To-Do: Pomodoro & Tasks', id: 1258530160
