@@ -15,7 +15,7 @@ f = fetch
 r = rebase
 lo = log --oneline
 po = push origin HEAD
-pf = push --force-with-lease origin HEAD
+pf = push --force-with-lease --force-if-includes origin HEAD
 
 [user]
     name = yuk1ty
