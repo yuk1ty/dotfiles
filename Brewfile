@@ -24,6 +24,7 @@ brew "cmake"
 brew "conftest"
 brew "deno"
 brew "git-delta"
+brew "gping"
 brew "docker-compose", link: false
 brew "exa"
 brew "expat"
