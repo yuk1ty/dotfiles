@@ -1,7 +1,10 @@
-all: init setup
+all: chezmoi init setup
+
+chezmoi:
+	sh start_chezmoi.sh
 
 init:
-	sh init.sh
+	sh brew_install.sh
 
 setup:
 	sh mac_setup.sh
