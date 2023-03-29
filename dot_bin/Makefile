@@ -1,7 +1,4 @@
-all: chezmoi init setup
-
-chezmoi:
-	sh start_chezmoi.sh
+all: init setup
 
 init:
 	sh brew_install.sh
