@@ -60,13 +60,10 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # for cargo, to be able to access crates on GitHub
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
 
-# script
-
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tac  | awk '!a[$0]++' | peco`
+function select-history() {
+    BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
     CURSOR=$#BUFFER
-    zle reset-prompt
 }
 
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
+zle -N select-history
+bindkey '^r' select-history
