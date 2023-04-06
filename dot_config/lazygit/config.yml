@@ -1,0 +1,15 @@
+gui:
+  language: "en"
+  showIcons: true
+customCommands:
+  - key: "U"
+    context: "global"
+    description: "Run fetch and rebase to get the latest data of repository"
+    command: 'git update "{{index .PromptResponses 0}}" "{{index .PromptResponses 1}}" '
+    prompts:
+      - type: "input"
+        title: "remote"
+        initialValue: "origin"
+      - type: "input"
+        title: "branch"
+        initialValue: "main"
