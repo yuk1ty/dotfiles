@@ -7,6 +7,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "jesseduffield/lazygit/lazygit"
 tap "versent/taps"
 tap "warrensbox/tap"
 
@@ -130,6 +131,3 @@ cask "slack"
 cask "tableplus"
 cask "visual-studio-code"
 cask "xquartz"
-
-# App Store
-mas 'Flow - Focus & Pomodoro Timer', id: 1423210932
