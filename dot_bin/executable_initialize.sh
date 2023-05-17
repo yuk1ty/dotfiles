@@ -15,7 +15,8 @@ install_webasm() {
 # set paths and install multiple Java versions for jenv
 install_java() {
     echo "Starting to install multiple java versions for jenv"
-    dir=~/.jenv/versions; [ ! -e $dir ] && mkdir -p $dir
+    dir=~/.jenv/versions
+    [ ! -e $dir ] && mkdir -p $dir
     jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
     jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/
     jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home/
@@ -28,15 +29,14 @@ install_python() {
 }
 
 # main script
-select VAR in rust webasm java python all exit
-do
+select VAR in rust webasm java python all exit; do
     if [ -z $VAR ]; then
         echo "Please input a number aside word"
         break
     fi
 
     if [ $VAR = rust ]; then
-        install_rust 
+        install_rust
         break
     elif [ $VAR = webasm ]; then
         install_webasm
