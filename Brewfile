@@ -101,6 +101,7 @@ brew "terraform", link: false
 brew "terraformer"
 brew "terraforming"
 brew "tmux"
+brew "tmuxinator"
 brew "zig"
 brew "zlib"
 brew "aws/tap/aws-sam-cli"
