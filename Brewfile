@@ -8,6 +8,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap jesseduffield/lazygit
 tap "versent/taps"
 tap "warrensbox/tap"
 
