@@ -35,6 +35,7 @@ alias awsc='ssh $(grep -w Host ~/.ssh/config | awk '\''{print $2}'\'' | peco) -v
 alias k='kubectl'
 alias kc='kubectx | peco | xargs kubectx'
 alias lazygit='lazygit -ucd ~/.config/lazygit'
+alias mux='tmuxinator'
 
 # PATH
 
