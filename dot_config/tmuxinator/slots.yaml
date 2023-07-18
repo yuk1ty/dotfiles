@@ -6,10 +6,10 @@ startup_pane: "0"
 windows:
   - slot-1:
       panes:
-        - clear
+        - neofetch
   - slot-2:
       panes:
-        - clear
+        - neofetch
   - slot-3:
       panes:
-        - clear
+        - neofetch
