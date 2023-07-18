@@ -1,6 +1,6 @@
 name: basics 
 root: "~"
-startup_window: htop 
+startup_window: health
 startup_pane: "0"
 
 windows:

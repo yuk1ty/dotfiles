@@ -1,0 +1,15 @@
+name: free-slots
+root: "~"
+startup_window: slot-1
+startup_pane: "0"
+
+windows:
+  - slot-1:
+      panes:
+        - clear
+  - slot-2:
+      panes:
+        - clear
+  - slot-3:
+      panes:
+        - clear
