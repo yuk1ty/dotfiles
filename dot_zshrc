@@ -26,8 +26,9 @@ setopt correct
 # alias
 
 alias cat='bat'
-alias ls='exa'
-alias ll='exa -la'
+alias ls='exa --icons'
+alias ll='exa --icons -lah'
+alias llt='exa --icons -lah -T -L2'
 alias grep='rg'
 alias hex='hexyl'
 alias prs='procs'
@@ -36,6 +37,7 @@ alias k='kubectl'
 alias kc='kubectx | peco | xargs kubectx'
 alias lazygit='lazygit -ucd ~/.config/lazygit'
 alias mux='tmuxinator'
+alias r='source ~/.zshrc'
 
 # PATH
 
