@@ -15,3 +15,7 @@ windows:
         - dotfiles:
             - chezmoi cd
             - clear
+  - docker:
+      panes:
+        - docker:
+            - lazydocker
