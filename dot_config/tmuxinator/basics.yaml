@@ -5,10 +5,9 @@ startup_pane: "0"
 
 windows:
   - health:
-      layout: tiled
+      layout: 44bb,363x83,0,0[363x71,0,0,61,363x11,0,72,64]
       panes:
-        - htop
-        - ytop
+        - btm
         - gping 8.8.8.8
   - dotfiles:
       panes:
