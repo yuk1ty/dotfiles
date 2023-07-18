@@ -20,6 +20,7 @@ pf = push --force-with-lease --force-if-includes origin HEAD
 [user]
     name = yuk1ty
     email = yuk1ty@users.noreply.github.com
+
 [filter "lfs"]
         clean = git-lfs clean -- %f
         smudge = git-lfs smudge -- %f
@@ -28,6 +29,14 @@ pf = push --force-with-lease --force-if-includes origin HEAD
 
 [core]
     pager = delta
+    editor = nvim
+    filemode = true
+
+[color]
+    ui = true
+
+[init]
+    defaultBranch = main
 
 [interactive]
     diffFilter = delta --color-only
