@@ -5,12 +5,11 @@ startup_pane: "0"
 
 windows:
   - health:
-      layout: main-horizontal
+      layout: tiled
       panes:
-        - htop:
-            - htop
-        - gping:
-            - gping 8.8.8.8
+        - htop
+        - ytop
+        - gping 8.8.8.8
   - dotfiles:
       panes:
         - dotfiles:
