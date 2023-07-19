@@ -40,9 +40,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # setup google's DN
 networksetup -setdnsservers Wi-Fi 2001:4860:4860::8844 2001:4860:4860::8888 8.8.4.4 8.8.8.8
 
-# mouse setups
-defaults write com.apple.mouse.scaling 5
-
 # dock setups
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock tilesize -int 36 && killall Dock
