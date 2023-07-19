@@ -6,7 +6,7 @@ yuk1ty's dotfiles.
 - If you're using macOS, hit the following command.
 
 ```
-brew install chezmoi
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yuk1ty
 ```
 
 - Or using other OS, visit this site for more details: https://www.chezmoi.io/install/
