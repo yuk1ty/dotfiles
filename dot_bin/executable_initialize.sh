@@ -37,11 +37,12 @@ install_aws_ssm() {
     sudo ./sessionmanager-bundle/install -i /usr/local/sessionmanagerplugin -b /usr/local/bin/session-manager-plugin
     session-manager-plugin --version
     echo "Clearning up temporary file"
+    rm -rf sessionmanager-bundle
     rm -rf sessionmanager-bundle.zip
 }
 
 # main script
-select VAR in rust webasm java python all exit; do
+select VAR in rust webasm java python ssm all exit; do
     if [ -z $VAR ]; then
         echo "Please input a number aside word"
         break
