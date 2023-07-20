@@ -4,6 +4,7 @@ set -e
 
 # Installation of k9s color scheme for macOS
 
+chezmoi cd
 LOC=$(pwd)
 export=LOC
 
