@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # install Rust
 install_rust() {
     echo "Starting to install Rust"
@@ -28,6 +30,16 @@ install_python() {
     curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 }
 
+install_aws_ssm() {
+    echo "Starting to install Session Manager plugin"
+    curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/mac_arm64/sessionmanager-bundle.zip" -o "sessionmanager-bundle.zip"
+    unzip sessionmanager-bundle.zip
+    sudo ./sessionmanager-bundle/install -i /usr/local/sessionmanagerplugin -b /usr/local/bin/session-manager-plugin
+    session-manager-plugin --version
+    echo "Clearning up temporary file"
+    rm -rf sessionmanager-bundle.zip
+}
+
 # main script
 select VAR in rust webasm java python all exit; do
     if [ -z $VAR ]; then
@@ -47,11 +59,15 @@ select VAR in rust webasm java python all exit; do
     elif [ $VAR = python ]; then
         install_python
         break
+    elif [ $VAR = ssm ]; then
+        install_aws_ssm
+        break
     elif [ $VAR = all ]; then
         install_rust
         install_webasm
         install_java
         install_python
+        install_aws_ssm
         break
     elif [ $VAR = exit ]; then
         break
