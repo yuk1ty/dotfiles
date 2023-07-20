@@ -7,6 +7,6 @@ if wezterm.config_builder then
 end
 
 config.color_scheme = 'nightfox'
-config.window_background_opacity = 0.9
+config.window_background_opacity = 1
 
 return config
