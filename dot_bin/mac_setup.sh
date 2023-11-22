@@ -44,6 +44,9 @@ networksetup -setdnsservers Wi-Fi 2001:4860:4860::8844 2001:4860:4860::8888 8.8.
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock tilesize -int 36 && killall Dock
 
+# hide desktop files
+defaults write com.apple.finder CreateDesktop -boolean false
+
 for app in "Dock" \
 	"Finder" \
 	"SystemUIServer"; do
