@@ -7,14 +7,18 @@ if wezterm.config_builder then
 end
 
 config.color_scheme = 'Catppuccin Mocha'
-
+-- To reset the colour scheme since Catppuccin Mocha sets too bright orange to indexed 16.
+-- This makes me difficult to see operations, for instance, renaming in Neovim.
 config.colors = {
   indexed = { [16] = '#1e1e1e' },
 }
 
 config.window_background_opacity = 0.9
 
-config.font = wezterm.font 'JetBrainsMono Nerd Font'
+config.font = wezterm.font_with_fallback({
+  { family = 'JetBrainsMono Nerd Font' },
+  { family = 'YuGothic', cell_width = 0.8 }
+})
 config.font_size = 12.0
 
 return config
