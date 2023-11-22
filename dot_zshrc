@@ -70,3 +70,8 @@ function select-history() {
 
 zle -N select-history
 bindkey '^r' select-history
+
+# Load machine-specific config
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi
