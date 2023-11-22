@@ -15,6 +15,6 @@ config.colors = {
 config.window_background_opacity = 0.9
 
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
-config.font_size = 13.0
+config.font_size = 12.0
 
 return config
