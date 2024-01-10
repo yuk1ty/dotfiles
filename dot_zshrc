@@ -72,6 +72,21 @@ function select-history() {
 zle -N select-history
 bindkey '^r' select-history
 
+# Search GitHub repositories
+
+fzf-src () {
+    FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS} --reverse --height=50%"
+    local root="$(ghq root)"
+    local repo="$(ghq list | fzf --preview="exa --tree --level=2 ${root}/{1}")"
+    local dir="${root}/${repo}"
+    [ -n "${dir}" ] && cd "${dir}"
+    zle accept-line
+    zle reset-prompt
+}
+
+zle -N fzf-src
+bindkey '^g' fzf-src
+
 # Load machine-specific config
 if [[ -f ~/.zshrc.local ]]; then
     source ~/.zshrc.local
