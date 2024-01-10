@@ -52,3 +52,5 @@ pf = push --force-with-lease --force-if-includes origin HEAD
 [diff]
     colorMoved = default
 
+[ghq]
+root = ~/github
