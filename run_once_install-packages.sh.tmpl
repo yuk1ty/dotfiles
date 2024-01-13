@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Install Rust
+if ! type rustup > /dev/null 2>&1; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
+# Install cargo related tools
+cargo install cargo-expand
+cargo install cargo-nextest
+cargo install cargo-deny
+cargo install cargo-make
+cargo install cargo udeps
+
+# Install tools managed by homebrew
+{{ if eq .chezmoi.os "darwin" }}
+xcode-select --install
+brew bundle --global
+{{ end }}

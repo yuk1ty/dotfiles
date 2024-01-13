@@ -1,12 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
 
-set -xe
-
-if [ "$(uname)" != "Darwin" ]; then
-	echo "This machine is not macOS!"
-	exit 1
-fi
-
+{{ if eq .chezmoi.os "darwin" }}
 # disable "press and hold" configuration
 defaults write -g ApplePressAndHoldEnabled -bool false
 
@@ -52,3 +46,4 @@ for app in "Dock" \
 	"SystemUIServer"; do
 	killall "${app}" &>/dev/null
 done
+{{ end }}

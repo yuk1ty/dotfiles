@@ -2,7 +2,7 @@ name: dotfiles try build
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
@@ -11,11 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Set MacOS.
+      - name: Install dotfiles
         run: |
-          make
-        working-directory: dot_bin
-
-      - name: chezmoi apply
-        run: chezmoi apply
+          brew uninstall --force $(brew list)
+          sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply -S .
