@@ -5,9 +5,11 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  dotfiles:
     runs-on: macos-latest
     timeout-minutes: 180
+    env:
+      HOMEBREW_BUNDLE_BREW_SKIP: "awscli"
 
     steps:
       - uses: actions/checkout@v3
