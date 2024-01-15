@@ -6,14 +6,28 @@ if ! type rustup > /dev/null 2>&1; then
 fi
 
 # Install cargo related tools
-cargo install cargo-expand
-cargo install cargo-nextest
-cargo install cargo-deny
-cargo install cargo-make
-cargo install cargo udeps
+if ! type cargo-expand > /dev/null 2>&1; then
+  cargo install cargo-expand
+fi
+if ! type cargo-nextest > /dev/null 2>&1; then
+  cargo install cargo-nextest
+fi
+if ! type cargo-deny > /dev/null 2>&1; then
+  cargo install cargo-deny
+fi
+if ! type cargo-make > /dev/null 2>&1; then
+  cargo install cargo-make
+fi
+if ! type cargo-udeps > /dev/null 2>&1; then
+  cargo install cargo-udeps
+fi
 
 # Install tools managed by homebrew
 {{ if eq .chezmoi.os "darwin" }}
-xcode-select --install
+if ! type xcode-select > /dev/null 2>&1; then
+  xcode-select --install
+fi
 brew bundle --global
 {{ end }}
+
+exit 0

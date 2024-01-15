@@ -17,7 +17,7 @@ config.window_background_opacity = 0.9
 
 config.font = wezterm.font_with_fallback({
   { family = 'JetBrainsMono Nerd Font' },
-  { family = 'YuGothic', cell_width = 0.8 }
+  { family = 'YuGothic' }
 })
 config.font_size = 12.0
 
