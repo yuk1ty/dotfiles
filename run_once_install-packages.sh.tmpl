@@ -30,4 +30,9 @@ fi
 brew bundle --global
 {{ end }}
 
+# Install mise dependencies
+if type mise > /dev/null 2>&1; then
+  mise install
+fi
+
 exit 0

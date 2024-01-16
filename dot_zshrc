@@ -1,7 +1,6 @@
 eval "$(starship init zsh)"
 eval "$(sheldon source)"
-eval "$(jenv init -)"
-eval "$(pyenv init -)"
+eval "$(mise activate zsh)"
 
 autoload -Uz colors
 colors
