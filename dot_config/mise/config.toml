@@ -4,3 +4,6 @@ java = "21"
 go = "1.20"
 node = "lts"
 terraform = ["1.6", "1.5"]
+
+[settings]
+legacy_version_file_disable_tools = ["terraform"]
