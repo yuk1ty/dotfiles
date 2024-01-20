@@ -1,5 +1,8 @@
 [git]
 autoCommit = true
 
+[diff]
+pager = "delta"
+
 [edit]
 command = "nvim"
