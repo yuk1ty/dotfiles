@@ -6,7 +6,7 @@ on:
 
 jobs:
   dotfiles:
-    runs-on: macos-latest
+    runs-on: macos-14
     timeout-minutes: 180
     env:
       HOMEBREW_BUNDLE_BREW_SKIP: "awscli"
@@ -21,10 +21,10 @@ jobs:
           brew uninstall --force $(brew list)
 
           # Remove symlink to install Python@3.12 correctly
-          rm /usr/local/bin/2to3-3.12
-          rm /usr/local/bin/idle3.12
-          rm /usr/local/bin/pydoc3.12
-          rm /usr/local/bin/python3.12
-          rm /usr/local/bin/python3.12-config
+          # rm /usr/local/bin/2to3-3.12
+          # rm /usr/local/bin/idle3.12
+          # rm /usr/local/bin/pydoc3.12
+          # rm /usr/local/bin/python3.12
+          # rm /usr/local/bin/python3.12-config
 
           sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply -S .
