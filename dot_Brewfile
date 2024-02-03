@@ -105,6 +105,7 @@ brew "filosottile/musl-cross/musl-cross"
 # cask
 cask "1password"
 cask "alfred"
+cask "amethyst"
 cask "aws-vault"
 cask "bloomrpc"
 cask "caffeine"
