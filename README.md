@@ -1,7 +1,9 @@
 # dotfiles
+
 yuk1ty's dotfiles.
 
 ## Prerequisites
+
 - Using chezmoi. Please install it in advance.
 - If you're using macOS, hit the following command.
 
@@ -20,7 +22,6 @@ ssh-keygen -t ed25519 -f ~/.ssh/<filename>
 ```
 
 Next, I should register the key to GitHub and my machine ([Guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)):
-
 
 Copy the pub key for pasting GitHub page:
 
@@ -63,3 +64,9 @@ I'm using `Brewfile` to manage what apps will be installed. Run the following co
 ```
 brew bundle
 ```
+
+## Install tpm and tmux theme
+
+In this repository, I use `tpm` to set up the colour and visual theme of tmux. Reloading `.tmux.conf` automatically every time you run `chezmoi apply` with some changes, but sometimes it doesn't update the configuration correctly.
+
+You might find an error with `signal 9` when you source `.tmux.conf`. In this case, you need to rerun tmux server with `(tmux) kill-server` and press `<prefix> + I` command. `<prefix>` is `Ctrl + t` in this repo.
