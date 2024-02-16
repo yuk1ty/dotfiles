@@ -39,4 +39,9 @@ if type mise > /dev/null 2>&1; then
   mise install
 fi
 
+# Install `gh` plugins
+if type gh > /dev/null 2>&1; then
+  gh extension install dlvhdr/gh-dash
+fi
+
 exit 0

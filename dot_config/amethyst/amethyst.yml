@@ -1,3 +1,4 @@
 window-margins: true
 window-margin-size: 10
 smart-window-margins: true
+floating: ["com.1password.1password"]
