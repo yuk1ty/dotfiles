@@ -21,6 +21,10 @@ fi
 if ! type cargo-udeps > /dev/null 2>&1; then
   cargo install cargo-udeps
 fi
+if ! type cargo-generate > /dev/null 2>&1; then
+  cargo install cargo-generate
+fi
+
 
 # Install tools managed by homebrew
 {{ if eq .chezmoi.os "darwin" }}
