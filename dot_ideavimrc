@@ -1,5 +1,33 @@
+" Install plugins
+Plug "machakann/vim-highlightedyank"
+Plug "tpope/vim-commentary"
+set which-key
+
+let mapleader = " "
+
+" Key mapping
+nmap gi <Action>(GotoImplementation)
+nmap gr <Action>(FindUsages)
+nmap <leader>fa <Action>(GotoAction)
+nmap <leader>ff <Action>(SearchEverywhere)
+nmap <leader>fw <Action>(FindInPath)
+nmap <leader>c <Action>(CloseContent)
+nmap <leader>e <Action>(ActivateProjectToolWindow)
+nmap <leader>la <Action>(ShowIntentionActions)
+nmap <leader>ls <Action>(ActivateStructureToolWindow)
+nmap <leader>th <Action>(ActivateTerminalToolWindow)
+nmap <leader>q <Action>(HideAllWindows)
+nmap <leader>/ <Action>(CommentByLineComment)
+nmap [b <Action>(PreviousTab)
+nmap ]b <Action>(NextTab)
+nmap u <Action>($Undo)
+nmap <C-l> <Action>(NextSplitter)
+nmap <C-h> <Action>(PrevSplitter)
+
+" Basic Configuration
+set notimeout
+set timeoutlen=5000
 set encoding=utf-8
-scriptencoding utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-boms,utf-8,euc-jp,cp932
 set fileformats=unix,dos,mac
