@@ -10,6 +10,9 @@ node = "lts"
 # IaC
 terraform = ["1.6", "1.5"]
 
+# Cargo Plugins
+"cargo:bp" = "latest"
+
 [settings]
 legacy_version_file_disable_tools = ["terraform"]
 experimental = true
