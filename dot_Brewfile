@@ -10,6 +10,7 @@ tap "jesseduffield/lazygit"
 tap "versent/taps"
 
 # brew
+brew "1password-cli"
 brew "aws-iam-authenticator"
 brew "awscli"
 brew "bat"
