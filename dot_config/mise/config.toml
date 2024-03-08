@@ -5,6 +5,7 @@ java = "21"
 go = "1.20"
 node = "lts"
 "asdf:kotlin" = "latest"
+"asdf:gradle" = "latest"
 "asdf:gleam" = "latest"
 
 # IaC
