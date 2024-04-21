@@ -13,6 +13,12 @@ terraform = ["1.6", "1.5"]
 
 # Cargo Plugins
 "cargo:bp" = "latest"
+"cargo:loco-cli" = "latest"
+"cargo:cargo-wizard" = "latest"
+"cargo:cargo-machete" = "latest"
+"cargo:cargo-sort" = "latest"
+"cargo:cargo-features-manager" = "latest"
+"cargo:cargo-chef" = "latest"
 
 [settings]
 legacy_version_file_disable_tools = ["terraform"]
