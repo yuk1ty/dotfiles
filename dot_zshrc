@@ -16,9 +16,9 @@ setopt correct
 # alias
 
 alias cat='bat'
-alias ls='exa --icons'
-alias ll='exa --icons -lah'
-alias llt='exa --icons -lah -T -L2'
+alias ls='eza --icons'
+alias ll='eza --icons -lah'
+alias llt='eza --icons -lah -T -L2'
 alias grep='rg'
 alias hex='hexyl'
 alias prs='procs'
