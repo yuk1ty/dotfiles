@@ -2,6 +2,7 @@
 # Programming Languages
 python = "3.12"
 java = ["17", "21"]
+rust = "1.78"
 go = "1.20"
 node = "lts"
 "asdf:kotlin" = "latest"

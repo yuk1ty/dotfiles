@@ -1,7 +1,3 @@
-eval "$(starship init zsh)"
-eval "$(sheldon source)"
-eval "$(mise activate zsh)"
-
 autoload -Uz colors
 colors
 
