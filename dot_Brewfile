@@ -91,6 +91,7 @@ brew "yazi"
 brew "zig"
 brew "zlib"
 brew "filosottile/musl-cross/musl-cross"
+brew "zellij"
 
 # cask
 cask "1password"

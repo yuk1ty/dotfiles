@@ -16,6 +16,7 @@ terraform = ["1.6", "1.5"]
 "cargo:bp" = "latest"
 "cargo:loco-cli" = "latest"
 "cargo:cargo-wizard" = "latest"
+"cargo:cargo-make" = "latest"
 "cargo:cargo-machete" = "latest"
 "cargo:cargo-sort" = "latest"
 "cargo:cargo-features-manager" = "latest"

@@ -1,3 +1,5 @@
+eval "$(starship init zsh)"
+
 autoload -Uz colors
 colors
 
@@ -49,7 +51,7 @@ fzf-src () {
 }
 
 zle -N fzf-src
-bindkey '^g' fzf-src
+bindkey '^w' fzf-src
 
 # Load machine-specific config
 if [[ -f ~/.zshrc.local ]]; then
