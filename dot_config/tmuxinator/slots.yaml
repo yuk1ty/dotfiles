@@ -1,4 +1,4 @@
-name: free-slots
+name: slots
 root: "~"
 startup_window: slot-1
 startup_pane: "0"

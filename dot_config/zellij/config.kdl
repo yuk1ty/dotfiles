@@ -363,3 +363,4 @@ copy_command "pbcopy"                     // osx
 // Default: false
 //
 // disable_session_metadata true
+
