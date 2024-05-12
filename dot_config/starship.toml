@@ -7,6 +7,12 @@ success_symbol = "[[♥](green) ❯](maroon)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
+[custom.git-username]
+command = "git config user.name"
+format = "$symbol $output($style)"
+require_repo = true
+symbol = ""
+
 [directory]
 truncation_length = 4
 # Catppuccin 'lavender'
