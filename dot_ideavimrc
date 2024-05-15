@@ -30,6 +30,7 @@ nmap <C-l> <Action>(NextSplitter)
 nmap <C-h> <Action>(PrevSplitter)
 
 " Basic Configuration
+set clipboard=unnamed
 set notimeout
 set timeoutlen=5000
 set encoding=utf-8
