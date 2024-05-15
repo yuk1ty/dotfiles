@@ -1,7 +1,6 @@
 name: basics 
 root: "~"
 startup_window: health
-startup_pane: "0"
 
 windows:
   - health:
@@ -18,3 +17,12 @@ windows:
       panes:
         - docker:
             - lazydocker
+  - slot1:
+      panes:
+        - 
+  - slot2:
+      panes:
+        - 
+  - slot3:
+      panes:
+        - 
