@@ -2,7 +2,7 @@
 # Programming Languages
 python = "3.12"
 java = ["adoptopenjdk-11", "17", "21"]
-go = "1.20"
+go = "latest"
 node = "lts"
 "asdf:kotlin" = "latest"
 "asdf:gradle" = "latest"
