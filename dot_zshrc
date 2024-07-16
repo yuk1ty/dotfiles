@@ -1,3 +1,4 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 eval "$(sheldon source)"
 eval "$(mise activate zsh)"
@@ -54,6 +55,19 @@ fzf-src () {
 
 zle -N fzf-src
 bindkey '^w' fzf-src
+
+fzf-z-search() {
+    local res=$(z | sort -rn | cut -c 12- | fzf)
+    if [ -n "$res" ]; then
+        BUFFER+="cd $res"
+        zle accept-line
+    else
+        return 1
+    fi
+}
+
+zle -N fzf-z-search
+bindkey '^f' fzf-z-search
 
 # Load machine-specific config
 if [[ -f ~/.zshrc.local ]]; then
