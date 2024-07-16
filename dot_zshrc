@@ -16,18 +16,18 @@ setopt correct
 
 # alias
 
+alias awsc='ssh $(grep -w Host ~/.ssh/config | awk '\''{print $2}'\'' | peco) -v'
 alias cat='bat'
-alias ls='eza --icons'
-alias ll='eza --icons -lah'
-alias llt='eza --icons -lah -T -L2'
 alias grep='rg'
 alias hex='hexyl'
-alias prs='procs'
-alias awsc='ssh $(grep -w Host ~/.ssh/config | awk '\''{print $2}'\'' | peco) -v'
 alias k='kubectl'
 alias kc='kubectx | peco | xargs kubectx'
 alias lazygit='lazygit -ucd ~/.config/lazygit'
+alias ll='eza --icons -lah'
+alias llt='eza --icons -lah -T -L2'
+alias ls='eza --icons'
 alias mux='tmuxinator'
+alias prs='procs'
 alias r='source ~/.zshrc'
 
 autoload -U +X bashcompinit && bashcompinit
