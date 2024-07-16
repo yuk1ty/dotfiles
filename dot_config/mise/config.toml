@@ -1,8 +1,8 @@
 [tools]
 # Programming Languages
 python = "3.12"
-java = ["adoptopenjdk-11", "17", "21"]
-go = "latest"
+java = ["17", "21"]
+go = "1.21"
 node = "lts"
 "asdf:kotlin" = "latest"
 "asdf:gradle" = "latest"
