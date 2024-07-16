@@ -29,6 +29,7 @@ alias ls='eza --icons'
 alias mux='tmuxinator'
 alias prs='procs'
 alias r='source ~/.zshrc'
+alias tf='terraform'
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
