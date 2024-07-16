@@ -26,10 +26,12 @@ alias lazygit='lazygit -ucd ~/.config/lazygit'
 alias ll='eza --icons -lah'
 alias llt='eza --icons -lah -T -L2'
 alias ls='eza --icons'
+alias nv='nvim'
 alias mux='tmuxinator'
 alias prs='procs'
 alias r='source ~/.zshrc'
 alias tf='terraform'
+alias v='vim'
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
