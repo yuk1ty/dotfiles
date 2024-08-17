@@ -1,4 +1,4 @@
-name: basics 
+name: basics
 root: "~"
 startup_window: health
 
@@ -6,8 +6,7 @@ windows:
   - health:
       layout: 44bb,363x83,0,0[363x71,0,0,61,363x11,0,72,64]
       panes:
-        - btm
-        - gping 8.8.8.8
+        - btop
   - dotfiles:
       panes:
         - dotfiles:
@@ -19,10 +18,10 @@ windows:
             - lazydocker
   - slot1:
       panes:
-        - 
+        -
   - slot2:
       panes:
-        - 
+        -
   - slot3:
       panes:
-        - 
+        -
