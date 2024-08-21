@@ -1,0 +1,20 @@
+# Specifies the network interface to use for the LocalIP readout
+interface = "wlan0"
+
+# Lengthen uptime output
+long_uptime = true
+
+# Lengthen shell output
+long_shell = true
+
+# Lengthen kernel output
+long_kernel = true
+
+# Toggle between displaying the current shell or your user's default one.
+current_shell = true
+
+# Toggle between displaying the number of physical or logical cores of your
+# processor.
+physical_cores = true
+
+theme = "Helium"

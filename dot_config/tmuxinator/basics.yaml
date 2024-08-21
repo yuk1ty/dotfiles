@@ -18,10 +18,10 @@ windows:
             - lazydocker
   - slot1:
       panes:
-        -
+        - macchina
   - slot2:
       panes:
-        -
+        - macchina
   - slot3:
       panes:
-        -
+        - macchina
