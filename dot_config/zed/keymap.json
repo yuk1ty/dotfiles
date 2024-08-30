@@ -1,0 +1,22 @@
+[
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      "space c": "pane::CloseActiveItem",
+      "space b c": "pane::CloseInactiveItems",
+      "space b C": "pane::CloseAllItems",
+      "space e": "workspace::ToggleLeftDock",
+      "space f f": "file_finder::Toggle",
+      "space l a": "editor::ToggleCodeActions",
+      "space l d": "diagnostics::Deploy",
+      "space l f": "editor::Format",
+      "space l s": "outline::Toggle",
+      "space t h": "workspace::OpenInTerminal",
+      "space t f": "workspace::NewCenterTerminal",
+      "space /": "editor::ToggleComments",
+      "g d v": "editor::GoToDefinitionSplit",
+      "g r": "editor::FindAllReferences",
+      ">": "vim::Indent"
+    }
+  }
+]
