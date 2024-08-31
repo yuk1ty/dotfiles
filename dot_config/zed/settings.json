@@ -4,6 +4,13 @@
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 14,
   "vim_mode": true,
+  "relative_line_numbers": true,
+  "scrollbar": {
+    "show": "never"
+  },
+  "buffer_line_height": {
+    "custom": 1.5
+  },
   "inlay_hints": {
     "enabled": true,
     "show_type_hints": true,
@@ -28,10 +35,12 @@
     "alternate_scroll": "off",
     "blinking": "terminal_controlled",
     "copy_on_select": true,
-    "env": {},
     "font_family": "JetBrainsMono Nerd Font",
     "toolbar": {
       "title": true
+    },
+    "line_height": {
+      "custom": 1.5
     },
     "working_directory": "current_project_directory"
   }
