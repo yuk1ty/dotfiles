@@ -2,6 +2,10 @@
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
       "space c": "pane::CloseActiveItem",
       "space b c": "pane::CloseInactiveItems",
       "space b C": "pane::CloseAllItems",
@@ -17,6 +21,13 @@
       "g d v": "editor::GoToDefinitionSplit",
       "g r": "editor::FindAllReferences",
       ">": "vim::Indent"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
     }
   }
 ]
