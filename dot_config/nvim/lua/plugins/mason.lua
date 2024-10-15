@@ -8,8 +8,10 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = {
+        -- Lua
         "lua_ls",
-        -- add more arguments for adding more language servers
+        -- Haskell
+        "hls",
       },
     },
   },
@@ -19,8 +21,11 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       ensure_installed = {
+        -- Lua
         "stylua",
-        -- add more arguments for adding more null-ls sources
+        -- Haskell
+        "ormolu",
+        "hlint",
       },
     },
   },
@@ -30,6 +35,8 @@ return {
     opts = {
       ensure_installed = {
         "python",
+        -- Haskell
+        "haskell-debug-adapter",
         -- add more arguments for adding more debuggers
       },
     },

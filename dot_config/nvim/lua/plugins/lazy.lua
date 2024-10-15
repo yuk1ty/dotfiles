@@ -3,7 +3,12 @@ return {
   -- use haskell tools
   {
     "mrcjkb/haskell-tools.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
     version = "4.2.0",
+    ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
+    init = function() vim.g.haskell_tools = {} end,
     lazy = false,
   },
   -- Enable Zen Mode
