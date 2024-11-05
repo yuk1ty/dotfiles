@@ -25,4 +25,27 @@ return {
       },
     },
   },
+  -- Enable GitHub Copilot Chat
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "canary",
+    dependencies = {
+      { "zbirenbaum/copilot.lua" },
+      { "nvim-lua/plenary.nvim" },
+    },
+    build = "make tiktoken",
+    opts = {
+      debug = true,
+      window = {
+        layout = "float",
+        relative = "cursor",
+        width = 1,
+        height = 0.4,
+        row = 1,
+      },
+    },
+    keys = {
+      { "<leader>.", "<cmd>CopilotChat<cr>", desc = "Open Copilot Chat" },
+    },
+  },
 }

@@ -11,8 +11,8 @@ return {
   {
     "catppuccin",
     opts = {
-      transparent_background = true
-    }
+      transparent_background = true,
+    },
   },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.rust" },
@@ -23,5 +23,5 @@ return {
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.programming-language-support.rest-nvim" }
+  { import = "astrocommunity.programming-language-support.rest-nvim" },
 }
