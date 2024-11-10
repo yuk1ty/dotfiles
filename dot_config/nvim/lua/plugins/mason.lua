@@ -12,6 +12,8 @@ return {
         "lua_ls",
         -- Haskell
         "hls",
+        -- TypeScript/JavaScript
+        "biome",
       },
     },
   },
@@ -26,6 +28,8 @@ return {
         -- Haskell
         "ormolu",
         "hlint",
+        -- TypeScript/JavaScript
+        "biome",
       },
     },
   },
