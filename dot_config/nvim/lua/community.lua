@@ -5,7 +5,6 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
 
   { import = "astrocommunity.colorscheme.catppuccin" },
   {
@@ -14,7 +13,10 @@ return {
       transparent_background = true,
     },
   },
+
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+
+  { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.python" },
@@ -24,4 +26,6 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.programming-language-support.rest-nvim" },
+
+  { import = "astrocommunity.recipes.telescope-lsp-mappings" },
 }
