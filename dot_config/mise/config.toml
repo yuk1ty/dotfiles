@@ -9,7 +9,7 @@ node = "lts"
 "asdf:gleam" = "latest"
 
 # IaC
-terraform = ["1.6", "1.5"]
+terraform = ["1.9.5", "1.6", "1.5"]
 
 # Cargo Plugins
 "cargo:bp" = "latest"
