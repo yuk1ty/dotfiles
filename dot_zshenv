@@ -1,5 +1,6 @@
 # Global setup
 export LANG=en_US.UTF-8
+export XDG_CONFIG_HOME="$HOME/.config"
 # run `brew` command without any updates
 export HOMEBREW_NO_AUTO_UPDATE=1
 
