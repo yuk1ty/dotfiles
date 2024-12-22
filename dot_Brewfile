@@ -8,6 +8,7 @@ tap "jesseduffield/lazygit"
 tap "versent/taps"
 
 # brew
+brew "asciinema"
 brew "aws-iam-authenticator"
 brew "awscli"
 brew "bat"
