@@ -6,3 +6,6 @@ window-theme = ghostty
 background-opacity = 0.85
 background-blur-radius = 20
 macos-titlebar-style = transparent
+font-family = ""
+font-family = "JetBrainsMono NF"
+font-family = "YuGothic"
