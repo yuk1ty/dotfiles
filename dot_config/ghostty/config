@@ -1,11 +1,11 @@
 theme = catppuccin-mocha
+
 window-padding-x = 20
-window-padding-y = 5
+window-padding-y = 10
 window-padding-balance = true
-window-theme = ghostty
 background-opacity = 0.85
 background-blur-radius = 20
 macos-titlebar-style = transparent
-font-family = ""
+
+font-feature = -dlig
 font-family = "JetBrainsMono NF"
-font-family = "YuGothic"
