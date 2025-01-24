@@ -25,6 +25,28 @@ return {
       },
     },
   },
+  -- Enable GitHub Copilot
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    opts = {
+      suggestion = {
+        enabled = true,
+        auto_trigger = true,
+        hide_during_completion = true,
+        debounce = 75,
+        keymap = {
+          accept = "<C-g>l",
+          accept_word = false,
+          accept_line = false,
+          next = "<C-g>j",
+          prev = "<C-g>k",
+          dismiss = "<C-g>d",
+        },
+      },
+    },
+    lazy = false,
+  },
   -- Enable GitHub Copilot Chat
   {
     "CopilotC-Nvim/CopilotChat.nvim",
