@@ -43,10 +43,7 @@ config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 
 config.font = wezterm.font_with_fallback({
-	{ family = "JetBrainsMono NF" },
-	{ family = "JetBrainsMono NerdFont" },
-	{ family = "JetBrainsMono" },
-	{ family = "YuGothic" },
+	{ family = "UDEV Gothic 35NFLG" },
 })
 config.font_size = 13.0
 
