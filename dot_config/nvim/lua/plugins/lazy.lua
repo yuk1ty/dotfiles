@@ -70,4 +70,26 @@ return {
       { "<leader>.", "<cmd>CopilotChat<cr>", desc = "Open Copilot Chat" },
     },
   },
+  -- Obsidian
+  {
+    "epwalsh/obsidian.nvim",
+    lazy = true,
+    ft = "markdown",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opt = {
+      workspaces = {
+        {
+          name = "helloyuki-hub",
+          path = "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/helloyuki-hub",
+        },
+      },
+      templates = {
+        folder = "1-templates",
+        date_format = "%Y-%m-%d",
+        time_format = "%H:%M",
+      },
+    },
+  },
 }
