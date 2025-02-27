@@ -73,6 +73,7 @@ return {
   -- Obsidian
   {
     "epwalsh/obsidian.nvim",
+    version = "*",
     lazy = true,
     ft = "markdown",
     dependencies = {
@@ -91,5 +92,13 @@ return {
         time_format = "%H:%M",
       },
     },
+  },
+  -- Pretty Markdown
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown" },
+    ---@module 'render-markdown'
+    opts = {},
   },
 }
