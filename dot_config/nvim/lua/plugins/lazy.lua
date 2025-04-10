@@ -74,10 +74,19 @@ return {
   {
     "epwalsh/obsidian.nvim",
     version = "*",
-    lazy = true,
+    lazy = false,
     ft = "markdown",
+    cmd = {
+      "ObsidianBacklinks",
+      "ObsidianOpen",
+      "ObsidianNew",
+      "ObsidianQuickSwitch",
+    },
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+      "nvim-telescope/telescope.nvim",
+      "nvim-treesitter/nvim-treesitter",
     },
     opt = {
       workspaces = {
