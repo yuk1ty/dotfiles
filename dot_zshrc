@@ -1,3 +1,4 @@
+eval "$(atuin init zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 eval "$(sheldon source)"
@@ -43,7 +44,7 @@ function select-history() {
 }
 
 zle -N select-history
-bindkey '^r' select-history
+bindkey '^e' select-history
 
 # Search GitHub repositories
 
@@ -58,7 +59,7 @@ fzf-src () {
 }
 
 zle -N fzf-src
-bindkey '^w' fzf-src
+bindkey '^g' fzf-src
 
 fzf-z-search() {
     local res=$(z | sort -rn | cut -c 12- | fzf)
