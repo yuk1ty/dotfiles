@@ -9,7 +9,6 @@ tap "versent/taps"
 
 # brew
 brew "asciinema"
-brew "atuin"
 brew "aws-iam-authenticator"
 brew "awscli"
 brew "bat"
