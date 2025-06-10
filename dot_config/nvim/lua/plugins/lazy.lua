@@ -47,67 +47,16 @@ return {
     },
     lazy = false,
   },
-  -- Enable GitHub Copilot Chat
+  -- Claude Code
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
-    dependencies = {
-      { "zbirenbaum/copilot.lua" },
-      { "nvim-lua/plenary.nvim" },
-    },
-    build = "make tiktoken",
-    opts = {
-      debug = true,
-      window = {
-        layout = "float",
-        relative = "cursor",
-        width = 1,
-        height = 0.4,
-        row = 1,
-      },
-    },
-    keys = {
-      { "<leader>.", "<cmd>CopilotChat<cr>", desc = "Open Copilot Chat" },
-    },
-  },
-  -- Obsidian
-  {
-    "epwalsh/obsidian.nvim",
-    version = "*",
-    lazy = false,
-    ft = "markdown",
-    cmd = {
-      "ObsidianBacklinks",
-      "ObsidianOpen",
-      "ObsidianNew",
-      "ObsidianQuickSwitch",
-    },
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-      "nvim-telescope/telescope.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    opt = {
-      workspaces = {
-        {
-          name = "helloyuki-hub",
-          path = "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/helloyuki-hub",
-        },
-      },
-      templates = {
-        folder = "1-templates",
-        date_format = "%Y-%m-%d",
-        time_format = "%H:%M",
-      },
-    },
+    "greggh/claude-code.nvim",
+    cmd = "ClaudeCode",
+    opts = {},
   },
   -- Pretty Markdown
   {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
     ft = { "markdown" },
-    ---@module 'render-markdown'
-    opts = {},
   },
 }
