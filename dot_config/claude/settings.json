@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(cat:*)",
+      "Bash(echo:*)",
+      "Bash(touch:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(git:*)",
+      "Bash(cargo:*)",
+      "Bash(npm:*)"
+    ]
+  },
+  "cleanupPeriodDays": 90,
+  "preferredNotifChannel": "terminal_bell",
+  "theme": "light"
+}
