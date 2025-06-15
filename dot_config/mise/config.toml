@@ -19,7 +19,7 @@ terraform = ["1.9.5"]
 "cargo:cargo-chef" = "latest"
 
 # npm Packages
-"npm:@anthropic-ai/claude-code" = "latest"
+"npm:@anthropic-ai/claude-code" = "1.0.22"
 
 [settings]
 legacy_version_file_disable_tools = ["terraform"]
