@@ -5,3 +5,4 @@ node_modules/
 .vscode/
 .mise.toml
 .mise.local.toml
+**/.claude/settings.local.json
