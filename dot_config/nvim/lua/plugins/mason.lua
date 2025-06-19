@@ -12,8 +12,6 @@ return {
         "lua_ls",
         -- Haskell
         "hls",
-        -- TypeScript/JavaScript
-        "biome",
       },
     },
   },
@@ -38,7 +36,6 @@ return {
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
       ensure_installed = {
-        "python",
         -- Haskell
         "haskell-debug-adapter",
         -- add more arguments for adding more debuggers

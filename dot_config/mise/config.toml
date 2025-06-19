@@ -1,6 +1,6 @@
 [tools]
 # Programming Languages
-python = "3.12"
+python = "3.13"
 java = ["17", "21"]
 go = "1.23"
 node = "lts"
