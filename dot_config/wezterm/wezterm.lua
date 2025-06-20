@@ -46,5 +46,6 @@ config.font = wezterm.font_with_fallback({
 	{ family = "UDEV Gothic 35NFLG" },
 })
 config.font_size = 13.0
+config.line_height = 1.3
 
 return config
