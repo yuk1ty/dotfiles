@@ -1,8 +1,8 @@
 [tools]
 # Programming Languages
-python = "3.13"
+python = "latest"
 java = ["17", "21"]
-go = "1.23"
+go = "latest"
 node = "lts"
 
 # IaC
