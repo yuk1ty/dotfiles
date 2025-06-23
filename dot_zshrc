@@ -32,6 +32,7 @@ alias mux='tmuxinator'
 alias prs='procs'
 alias r='source ~/.zshrc'
 alias tf='terraform'
+alias yolo='claude --dangerously-skip-permissions'
 alias v='vim'
 
 autoload -U +X bashcompinit && bashcompinit
