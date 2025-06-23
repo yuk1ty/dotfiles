@@ -11,9 +11,19 @@
       "Bash(mkdir:*)",
       "Bash(cp:*)",
       "Bash(mv:*)",
-      "Bash(git:*)",
       "Bash(cargo:*)",
       "Bash(npm:*)"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(rm:*)",
+      "Bash(rm -rf:*)",
+      "Bash(git push:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Read(id_rsa)",
+      "Read(id_ed25519)",
+      "Read(**/.ssh/*)"
     ]
   },
   "cleanupPeriodDays": 90,
