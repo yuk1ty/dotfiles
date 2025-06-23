@@ -18,6 +18,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.gleam" },
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.proto" },
   { import = "astrocommunity.pack.scala" },

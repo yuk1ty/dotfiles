@@ -3,6 +3,7 @@
 python = "latest"
 java = ["17", "21"]
 go = "latest"
+gleam = "latest"
 node = "lts"
 
 # IaC
