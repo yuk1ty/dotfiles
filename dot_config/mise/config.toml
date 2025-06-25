@@ -21,6 +21,7 @@ terraform = ["1.9.5"]
 
 # npm Packages
 "npm:@anthropic-ai/claude-code" = "1.0.30"
+"npm:@google/gemini-cli" = "latest"
 
 [settings]
 legacy_version_file_disable_tools = ["terraform"]
