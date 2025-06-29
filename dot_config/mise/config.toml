@@ -18,6 +18,7 @@ terraform = ["1.9.5"]
 "cargo:cargo-sort" = "latest"
 "cargo:cargo-features-manager" = "latest"
 "cargo:cargo-chef" = "latest"
+"cargo:bacon-ls" = "latest"
 
 # npm Packages
 "npm:@anthropic-ai/claude-code" = "1.0.30"
