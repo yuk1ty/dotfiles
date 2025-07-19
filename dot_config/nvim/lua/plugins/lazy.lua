@@ -80,4 +80,6 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
     ft = { "markdown" },
   },
+  -- Neoconf
+  { "folke/neoconf.nvim" },
 }
