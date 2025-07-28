@@ -77,5 +77,6 @@
       "Bash(rm -rf ~/*)",
       "Bash(sudo*)"
     ]
-  }
+  },
+  "awsAuthRefresh": "aws sso login"
 }
