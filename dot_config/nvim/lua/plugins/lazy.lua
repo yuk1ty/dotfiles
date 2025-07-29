@@ -82,4 +82,6 @@ return {
   },
   -- Neoconf
   { "folke/neoconf.nvim" },
+  -- Marp
+  { "nwiizo/marp.nvim" },
 }
