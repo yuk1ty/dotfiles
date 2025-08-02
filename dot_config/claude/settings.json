@@ -1,6 +1,7 @@
 {
   "env": {
-    "SHELL": "/bin/zsh"
+    "SHELL": "/bin/zsh",
+    "DISABLE_AUTOUPDATER": "1"
   },
   "cleanupPeriodDays": 90,
   "preferredNotifChannel": "terminal_bell",
