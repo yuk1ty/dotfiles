@@ -18,8 +18,8 @@ po = push origin HEAD
 pf = push --force-with-lease --force-if-includes origin HEAD
 
 [user]
-    name = yuk1ty
-    email = yuk1ty@users.noreply.github.com
+        name = yuk1ty
+        email = yuk1ty@users.noreply.github.com
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
