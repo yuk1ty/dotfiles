@@ -18,6 +18,7 @@ nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 nnoremap x "_x
 xnoremap x "_x
 
+set clipboard^=unnamedplus
 set whichwrap=b,s,h,l,<,>,[,],~
 set number
 set cursorline
