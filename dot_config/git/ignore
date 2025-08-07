@@ -7,3 +7,4 @@ node_modules/
 .mise.local.toml
 **/.claude/settings.local.json
 **/.serena/project.yml
+**/.mcp.json
