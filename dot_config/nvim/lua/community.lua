@@ -22,10 +22,11 @@ return {
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.proto" },
   { import = "astrocommunity.pack.scala" },
-  { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.programming-language-support.rest-nvim" },
 
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
