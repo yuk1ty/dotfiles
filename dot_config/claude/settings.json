@@ -21,7 +21,9 @@
       "TodoWrite(**)",
       "WebFetch(domain:*)",
       "WebSearch(**)",
-      "Write(**)"
+      "Write(**)",
+      "Bash(gh pr diff*)",
+      "Bash(gh pr view*)"
     ],
     "deny": [
       "Bash(* | bash)",
