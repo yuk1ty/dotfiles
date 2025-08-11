@@ -49,29 +49,27 @@ return {
   },
   -- Claude Code
   {
-    "greggh/claude-code.nvim",
-    cmd = "ClaudeCode",
-    opts = {
-      window = {
-        position = "vertical",
+    "coder/claudecode.nvim",
+    dependencies = { "folke/snacks.nvim" },
+    config = true,
+    keys = {
+      { "<leader>z", nil, desc = "AI/Claude Code" },
+      { "<leader>zc", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
+      { "<leader>zf", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
+      { "<leader>zr", "<cmd>ClaudeCode --resume<cr>", desc = "Resume Claude" },
+      { "<leader>zC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
+      { "<leader>zm", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select Claude model" },
+      { "<leader>zb", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add current buffer" },
+      { "<leader>zs", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
+      {
+        "<leader>zs",
+        "<cmd>ClaudeCodeTreeAdd<cr>",
+        desc = "Add file",
+        ft = { "NvimTree", "neo-tree", "oil", "minifiles" },
       },
-      command_variants = {
-        continue = "--continue",
-        resume = "--resume",
-        verbose = "--verbose",
-      },
-      keymaps = {
-        toggle = {
-          normal = "<C-,>", -- Normal mode keymap for toggling Claude Code, false to disable
-          terminal = "<leader>tc", -- Terminal mode keymap for toggling Claude Code, false to disable
-          variants = {
-            continue = "<leader>cC", -- Normal mode keymap for Claude Code with continue flag
-            verbose = "<leader>cV", -- Normal mode keymap for Claude Code with verbose flag
-          },
-        },
-        window_navigation = true, -- Enable window navigation keymaps (<C-h/j/k/l>)
-        scrolling = true, -- Enable scrolling keymaps (<C-f/b>) for page up/down
-      },
+      -- Diff management
+      { "<leader>za", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
+      { "<leader>zd", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
     },
   },
   -- Pretty Markdown
