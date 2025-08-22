@@ -10,7 +10,12 @@ return {
   {
     "catppuccin",
     opts = {
+      flavour = "mocha",
       transparent_background = true,
+      float = {
+        transparent = true,
+        solid = false,
+      },
     },
   },
 
