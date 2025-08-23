@@ -6,5 +6,33 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  -- import/override with your plugins folder
+  { import = "astrocommunity.colorscheme.catppuccin" },
+  {
+    "catppuccin",
+    opts = {
+      flavour = "mocha",
+      transparent_background = true,
+      float = {
+        transparent = true,
+        solid = false,
+      },
+    },
+  },
+
+  { import = "astrocommunity.pack.biome" },
+  { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.gleam" },
+  { import = "astrocommunity.pack.python-ruff" },
+  { import = "astrocommunity.pack.proto" },
+  { import = "astrocommunity.pack.scala" },
+  { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.terraform" },
+  { import = "astrocommunity.programming-language-support.rest-nvim" },
+
+  { import = "astrocommunity.recipes.telescope-lsp-mappings" },
 }
