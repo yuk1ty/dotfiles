@@ -11,7 +11,7 @@ return {
         -- Lua
         "lua_ls",
         -- Haskell
-        "hls",
+        -- "hls",
       },
     },
   },
