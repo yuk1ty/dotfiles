@@ -13,14 +13,27 @@ return {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
       autopairs = true, -- enable autopairs at start
       cmp = true, -- enable completion at start
-      diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
+      diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
       virtual_text = true,
-      underline = false,
+      underline = true,
+    },
+    -- passed to `vim.filetype.add`
+    filetypes = {
+      -- see `:h vim.filetype.add` for usage
+      extension = {
+        foo = "fooscript",
+      },
+      filename = {
+        [".foorc"] = "fooscript",
+      },
+      pattern = {
+        [".*/etc/foo/.*"] = "fooscript",
+      },
     },
     -- vim options can be configured here
     options = {
