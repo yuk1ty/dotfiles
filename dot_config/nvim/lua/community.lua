@@ -34,4 +34,5 @@ return {
   { import = "astrocommunity.programming-language-support.rest-nvim" },
 
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
+  { import = "astrocommunity.recipes.vscode" },
 }
