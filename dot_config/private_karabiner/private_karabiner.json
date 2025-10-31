@@ -1,0 +1,377 @@
+{
+    "profiles": [
+        {
+            "complex_modifications": {
+                "parameters": { "basic.to_if_alone_timeout_milliseconds": 150 },
+                "rules": [
+                    {
+                        "description": "コマンドキーを単体で押したときに、英数・かなキーを送信する。（左コマンドキーは英数、右コマンドキーはかな） (rev 3)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 100 },
+                                "to": [
+                                    {
+                                        "key_code": "left_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "japanese_eisuu" }],
+                                "to_if_held_down": [{ "key_code": "left_command" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 100 },
+                                "to": [
+                                    {
+                                        "key_code": "right_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "japanese_kana" }],
+                                "to_if_held_down": [{ "key_code": "right_command" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "1秒間押し続けないとCmd-Qが実行されないようにする",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "q",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 1000 },
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "q",
+                                        "modifiers": ["command"],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "escキーを押したときに、英数キーも送信する（vim用）",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "escape" },
+                                "to": [
+                                    { "key_code": "escape" },
+                                    { "key_code": "japanese_eisuu" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 591,
+                        "vendor_id": 1452
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "end" },
+                            "to": [{ "key_code": "vk_none" }]
+                        },
+                        {
+                            "from": { "key_code": "home" },
+                            "to": [{ "key_code": "vk_none" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 12869,
+                        "vendor_id": 6645
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
+                        }
+                    ]
+                },
+                {
+                    "fn_function_keys": [
+                        {
+                            "from": { "key_code": "f1" },
+                            "to": [{ "key_code": "f1" }]
+                        },
+                        {
+                            "from": { "key_code": "f2" },
+                            "to": [{ "key_code": "f2" }]
+                        },
+                        {
+                            "from": { "key_code": "f3" },
+                            "to": [{ "key_code": "f3" }]
+                        },
+                        {
+                            "from": { "key_code": "f4" },
+                            "to": [{ "key_code": "f4" }]
+                        },
+                        {
+                            "from": { "key_code": "f5" },
+                            "to": [{ "key_code": "f5" }]
+                        },
+                        {
+                            "from": { "key_code": "f6" },
+                            "to": [{ "key_code": "f6" }]
+                        },
+                        {
+                            "from": { "key_code": "f7" },
+                            "to": [{ "key_code": "f7" }]
+                        },
+                        {
+                            "from": { "key_code": "f8" },
+                            "to": [{ "key_code": "f8" }]
+                        },
+                        {
+                            "from": { "key_code": "f9" },
+                            "to": [{ "key_code": "f9" }]
+                        },
+                        {
+                            "from": { "key_code": "f10" },
+                            "to": [{ "key_code": "f10" }]
+                        },
+                        {
+                            "from": { "key_code": "f11" },
+                            "to": [{ "key_code": "f11" }]
+                        },
+                        {
+                            "from": { "key_code": "f12" },
+                            "to": [{ "key_code": "f12" }]
+                        }
+                    ],
+                    "identifiers": {
+                        "device_address": "eb-1f-5e-47-95-57",
+                        "is_keyboard": true,
+                        "is_pointing_device": true
+                    },
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "device_address": "eb-1f-5e-47-3c-44",
+                        "is_keyboard": true,
+                        "is_pointing_device": true
+                    },
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
+                        }
+                    ]
+                },
+                {
+                    "fn_function_keys": [
+                        {
+                            "from": { "key_code": "f2" },
+                            "to": [{ "key_code": "2" }]
+                        },
+                        {
+                            "from": { "key_code": "f3" },
+                            "to": [{ "key_code": "3" }]
+                        },
+                        {
+                            "from": { "key_code": "f4" },
+                            "to": [{ "key_code": "4" }]
+                        },
+                        {
+                            "from": { "key_code": "f5" },
+                            "to": [{ "key_code": "5" }]
+                        },
+                        {
+                            "from": { "key_code": "f6" },
+                            "to": [{ "key_code": "6" }]
+                        },
+                        {
+                            "from": { "key_code": "f7" },
+                            "to": [{ "key_code": "7" }]
+                        },
+                        {
+                            "from": { "key_code": "f8" },
+                            "to": [{ "key_code": "8" }]
+                        },
+                        {
+                            "from": { "key_code": "f9" },
+                            "to": [{ "key_code": "9" }]
+                        },
+                        {
+                            "from": { "key_code": "f10" },
+                            "to": [{ "key_code": "0" }]
+                        },
+                        {
+                            "from": { "key_code": "f11" },
+                            "to": [{ "key_code": "hyphen" }]
+                        },
+                        {
+                            "from": { "key_code": "f12" },
+                            "to": [{ "key_code": "equal_sign" }]
+                        }
+                    ],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 12318,
+                        "vendor_id": 14000
+                    },
+                    "ignore": false,
+                    "ignore_vendor_events": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 12318,
+                        "vendor_id": 14000
+                    },
+                    "ignore": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 22,
+                        "vendor_id": 1278
+                    },
+                    "ignore": false
+                },
+                {
+                    "identifiers": { "is_keyboard": true },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 12355,
+                        "vendor_id": 14000
+                    },
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        },
+                        {
+                            "from": { "key_code": "right_option" },
+                            "to": [{ "key_code": "right_command" }]
+                        },
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 12355,
+                        "vendor_id": 14000
+                    },
+                    "ignore": true,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        }
+                    ]
+                }
+            ],
+            "fn_function_keys": [
+                {
+                    "from": { "key_code": "f6" },
+                    "to": [{ "key_code": "vk_none" }]
+                }
+            ],
+            "name": "helloyuki",
+            "selected": true,
+            "virtual_hid_keyboard": {
+                "country_code": 0,
+                "keyboard_type_v2": "ansi"
+            }
+        }
+    ]
+}
