@@ -4,7 +4,7 @@ python = "latest"
 java = ["17", "21"]
 go = "latest"
 gleam = "latest"
-node = "lts"
+node = "latest"
 
 # IaC
 terraform = ["1.9.5"]
