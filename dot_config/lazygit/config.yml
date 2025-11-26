@@ -1,7 +1,6 @@
 git:
-  paging:
-    colorArg: "always"
-    pager: "delta --dark --paging=never"
+  pagers:
+    - pager: delta --dark --paging=never
 gui:
   language: "en"
   showIcons: true
@@ -17,3 +16,12 @@ customCommands:
       - type: "input"
         title: "branch"
         initialValue: "main"
+  - key: "C"
+    context: "localBranches"
+    description: "Checkout a branch with Pull Requests' number"
+    prompts:
+      - type: "input"
+        title: "Pull Request Number"
+        key: "PrNum"
+    command: "gh pr checkout {{.Form.PrNum}}"
+    loadingText: "Checking out specified branch to local"
