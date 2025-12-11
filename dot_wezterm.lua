@@ -41,11 +41,19 @@ config.window_background_opacity = 0.85
 config.macos_window_background_blur = 20
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
+config.window_frame = {
+	inactive_titlebar_bg = "none",
+	active_titlebar_bg = "none",
+}
+config.window_background_gradient = {
+	colors = { "#11111b" },
+}
 
 config.font = wezterm.font_with_fallback({
 	{ family = "UDEV Gothic 35NFLG" },
 })
 config.font_size = 13.0
 config.line_height = 1.3
+config.use_ime = true
 
 return config
