@@ -92,4 +92,20 @@ return {
       { "<leader>gY", "<cmd>GitLink!<cr>", mode = { "n", "v" }, desc = "Open git link" },
     },
   },
+  -- Obsidian
+  {
+    "obsidian-nvim/obsidian.nvim",
+    version = "*",
+    ft = { "markdown" },
+    ---@module 'obsidian'
+    opts = {
+      workspaces = {
+        {
+          name = "personal",
+          path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/helloyuki-hub",
+        },
+      },
+    },
+    lazy = false,
+  },
 }
