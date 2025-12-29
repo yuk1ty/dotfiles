@@ -30,6 +30,9 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+-- Automatically reloads the configuration file
+config.automatically_reload_config = true
+
 config.color_scheme = "Catppuccin Mocha"
 -- To reset the colour scheme since Catppuccin Mocha sets too bright orange to indexed 16.
 -- This makes me difficult to see operations, for instance, renaming in Neovim.
