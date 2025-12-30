@@ -47,3 +47,6 @@ for app in "Dock" \
 	killall "${app}" &>/dev/null
 done
 {{ end }}
+
+# grouping windows per app
+defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
