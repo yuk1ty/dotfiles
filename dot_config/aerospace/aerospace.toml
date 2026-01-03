@@ -1,4 +1,7 @@
-after-startup-command = ['exec-and-forget sketchybar']
+after-startup-command = [
+  'exec-and-forget borders',
+  'exec-and-forget sketchybar',
+]
 start-at-login = true
 
 [gaps]
