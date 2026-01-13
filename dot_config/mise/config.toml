@@ -23,6 +23,9 @@ terraform = ["1.9.5"]
 # npm Packages
 "npm:@anthropic-ai/claude-code" = "latest"
 
+# Go Packages
+"go:github.com/d-kuro/gwq/cmd/gwq" = "latest"
+
 [settings]
 legacy_version_file_disable_tools = ["terraform"]
 experimental = true
