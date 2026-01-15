@@ -10,7 +10,11 @@ inner.vertical = 10
 outer.left = 10
 outer.bottom = 10
 outer.right = 10
-outer.top = [{ monitor.'LG ULTRAWIDE' = 35 }, 10]
+outer.top = [
+  { monitor.'LG ULTRAWIDE' = 35 },
+  { monitor.'DELL U3425WE' = 35 },
+  10,
+]
 
 [mode.main.binding]
 alt-h = 'focus left'
