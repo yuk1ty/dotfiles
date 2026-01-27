@@ -173,4 +173,55 @@ return {
       },
     },
   },
+  -- Kotlin
+  {
+    "AlexandrosAlexiou/kotlin.nvim",
+    ft = { "kotlin" },
+    dependencies = {
+      "mason.nvim",
+      "mason-lspconfig.nvim",
+    },
+    config = function()
+      require("kotlin").setup {
+        root_markers = {
+          "gradlew",
+          ".git",
+          "mvnw",
+          "settings.gradle",
+        },
+        jre_path = nil,
+        jdk_for_symbol_resolution = nil,
+        jvm_args = {
+          "-Xmx4g",
+        },
+        inlay_hints = {
+          enabled = true, -- Enable inlay hints (auto-enable on LSP attach)
+          parameters = true, -- Show parameter names
+          parameters_compiled = true, -- Show compiled parameter names
+          parameters_excluded = false, -- Show excluded parameter names
+          types_property = true, -- Show property types
+          types_variable = true, -- Show local variable types
+          function_return = true, -- Show function return types
+          function_parameter = true, -- Show function parameter types
+          lambda_return = true, -- Show lambda return types
+          lambda_receivers_parameters = true, -- Show lambda receivers/parameters
+          value_ranges = true, -- Show value ranges
+          kotlin_time = true, -- Show kotlin.time warnings
+        },
+        keymap = {
+          goto_definition = "gd",
+          goto_type_definition = "gD",
+          goto_implementation = "gi",
+          find_references = "gr",
+          show_hover = "K",
+          show_signature_help = "gs",
+          organize_imports = "<leader>ko",
+          add_missing_imports = "<leader>ka",
+          remove_unused_imports = "<leader>kR",
+          show_inlay_hints = "<leader>kh",
+          set_jdk = "<leader>kj",
+        },
+      }
+    end,
+  },
 }
