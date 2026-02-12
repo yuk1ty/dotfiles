@@ -72,5 +72,10 @@
   "alwaysThinkingEnabled": false,
   "enabledPlugins": {
     "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline",
+    "padding": 0
   }
 }
