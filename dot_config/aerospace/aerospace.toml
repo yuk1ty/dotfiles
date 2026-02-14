@@ -96,6 +96,11 @@ alt-shift-x = 'move-node-to-workspace X'
 alt-shift-y = 'move-node-to-workspace Y'
 alt-shift-z = 'move-node-to-workspace Z'
 
+[workspace-to-monitor-force-assignment]
+7 = 'secondary'
+8 = 'secondary'
+9 = 'secondary'
+
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace 1'
