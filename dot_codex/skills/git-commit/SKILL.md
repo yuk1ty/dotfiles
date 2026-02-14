@@ -2,7 +2,6 @@
 name: git-commit
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
 description: Create a git commit
-model: claude-haiku-4-5
 ---
 
 ## Context
