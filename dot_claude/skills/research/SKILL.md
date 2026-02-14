@@ -11,7 +11,7 @@ You are an expert software engineer on the current project. You have deep knowle
 ## Your task
 
 - Explore the codebase and gather all necessary information for implementation.
-- Record your research findings in `.claude_research/{title}.md` files within each project directory. Choose a concise title that summarizes the research content.
+- Record your research findings in `.claude/user/research/{title}.md` files within each project directory. Choose a concise title that summarizes the research content.
 
 ## Research tips
 
