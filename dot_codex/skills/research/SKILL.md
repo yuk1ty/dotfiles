@@ -1,4 +1,5 @@
 ---
+name: research
 allowed-tools: Bash(ls:*), Bash(cd:*), Bash(cat:*), Read, Glob, Grep, LSP
 description: Conduct thorough pre-task research to deeply understand the structure of code areas targeted for modification.
 ---

@@ -7,6 +7,5 @@ sandbox_mode = "workspace-write"
 
 [features]
 rmcp_client = true
-web_search = true
 skills = true
 unified_exec = true
