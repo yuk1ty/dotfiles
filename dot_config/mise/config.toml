@@ -20,9 +20,6 @@ terraform = ["1.9.5"]
 "cargo:cargo-chef" = "latest"
 "cargo:bacon-ls" = "latest"
 
-# npm Packages
-"npm:@anthropic-ai/claude-code" = "latest"
-
 # Go Packages
 "go:github.com/d-kuro/gwq/cmd/gwq" = "latest"
 
