@@ -88,10 +88,24 @@ return {
     ---@module 'obsidian'
     opts = {
       workspaces = {
+        -- {
+        --   name = "personal",
+        --   path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/helloyuki-hub",
+        -- },
         {
-          name = "personal",
-          path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/helloyuki-hub",
+          name = "helloyuki.obsidian (work)",
+          path = "~/github/private/yuk1ty/helloyuki.obsidian",
         },
+        {
+          name = "helloyuki.obsidian (personal)",
+          path = "~/github.com/yuk1ty/helloyuki.obsidian",
+        },
+      },
+      templates = {
+        folder = "templates",
+        date_format = "%Y-%m-%d",
+        time_format = "%H:%M",
+        substitutions = {},
       },
     },
     lazy = false,
