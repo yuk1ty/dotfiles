@@ -11,3 +11,6 @@ github = "zsh-users/zsh-syntax-highlighting"
 
 [plugins.z]
 github = "rupa/z"
+
+[plugins.zsh-abbr]
+github = "olets/zsh-abbr"

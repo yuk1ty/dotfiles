@@ -15,25 +15,11 @@ setopt histignorealldups
 setopt correct
 
 # alias
-
-alias awsc='ssh $(grep -w Host ~/.ssh/config | awk '\''{print $2}'\'' | peco) -v'
 alias cat='bat'
 alias grep='rg'
-alias hex='hexyl'
-alias k='kubectl'
-alias cleandocker='docker compose down --rmi all --volumes --remove-orphans'
-alias kc='kubectx | peco | xargs kubectx'
-alias lazygit='lazygit -ucd ~/.config/lazygit'
 alias ll='eza --icons -lah'
 alias llt='eza --icons -lah -T -L2'
 alias ls='eza --icons'
-alias nv='nvim'
-alias mux='tmuxinator'
-alias prs='procs'
-alias r='source ~/.zshrc'
-alias tf='terraform'
-alias yolo='claude --dangerously-skip-permissions'
-alias v='vim'
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
