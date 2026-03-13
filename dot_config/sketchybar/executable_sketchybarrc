@@ -33,29 +33,31 @@ default=(
 )
 sketchybar --default "${default[@]}"
 
-##### Adding Mission Control Space Indicators #####
-# Let's add some mission control spaces:
-# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
-# to indicate active and available mission control spaces.
+##### Adding AeroSpace Workspace Indicators #####
+sketchybar --add event aerospace_workspace_change
 
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-for i in "${!SPACE_ICONS[@]}"
-do
-  sid="$(($i+1))"
-  space=(
-    space="$sid"
-    icon="${SPACE_ICONS[i]}"
-    icon.padding_left=7
-    icon.padding_right=7
-    background.color=0x40ffffff
-    background.corner_radius=5
-    background.height=25
-    label.drawing=off
-    script="$PLUGIN_DIR/space.sh"
-    click_script="yabai -m space --focus $sid"
-  )
-  sketchybar --add space space."$sid" left --set space."$sid" "${space[@]}"
+AEROSPACE_WORKSPACES=(1 2 3 4 5 6 7 8 9 A B C D E G I M N O P Q R S T U V W X Y Z)
+
+for ws in "${AEROSPACE_WORKSPACES[@]}"; do
+  sketchybar --add item "aerospace.$ws" left \
+             --set "aerospace.$ws" \
+                   icon="$ws" \
+                   icon.padding_left=7 \
+                   icon.padding_right=7 \
+                   background.color=0x40ffffff \
+                   background.corner_radius=5 \
+                   background.height=25 \
+                   label.drawing=off \
+                   drawing=off \
+                   click_script="aerospace workspace $ws"
 done
+
+# Single observer updates all workspace items
+sketchybar --add item aerospace_observer left \
+           --set aerospace_observer \
+                 drawing=off \
+                 script="$PLUGIN_DIR/aerospace.sh" \
+           --subscribe aerospace_observer aerospace_workspace_change
 
 ##### Adding Left Items #####
 # We add some regular items to the left side of the bar, where
