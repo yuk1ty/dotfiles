@@ -29,7 +29,7 @@ customCommands:
     context: "files"
     command: |
       COMMIT_MSG=$(git diff --cached | claude --no-session-persistence --print --model haiku \
-      'Generate ONLY a one-line Git commit message. \
-      Commit message starts with uppercase letters. For instance, if you want to write the "add a new file" message then should be "Add a new file". \
+      'Generate ONLY a one-line Git commit message. Please prior to the repository's convention. \
+      If there's no convention in the repository, commit message starts with uppercase letters. For instance, if you want to write the "add a new file" message then should be "Add a new file". \
       Based strictly on the diff from stdin. Output ONLY the message, nothing else.') \
       && git commit -m "$COMMIT_MSG"
