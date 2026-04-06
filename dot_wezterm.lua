@@ -53,7 +53,7 @@ config.window_background_gradient = {
 }
 
 config.font = wezterm.font_with_fallback({
-	{ family = "UDEV Gothic 35NFLG" },
+	{ family = "UDEV Gothic 35NFLG", weight = "Regular", harfbuzz_features = { "calt=1", "clig=1", "liga=1" } },
 })
 config.font_size = 13.0
 config.line_height = 1.3
