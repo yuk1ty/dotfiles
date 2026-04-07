@@ -18,8 +18,8 @@ po = push origin HEAD
 pf = push --force-with-lease --force-if-includes origin HEAD
 
 [user]
-        name = yuk1ty
-        email = yuk1ty@users.noreply.github.com
+    name = yuk1ty
+    email = yuk1ty@users.noreply.github.com
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
@@ -41,10 +41,14 @@ pf = push --force-with-lease --force-if-includes origin HEAD
 [interactive]
     diffFilter = delta --color-only
 
+[include]
+	path = ~/.config/delta/themes/catppuccin.gitconfig
+
 [delta]
     navigate = true
     side-by-side = true
     line-numbers = true
+    features = catppuccin-mocha
 
 [merge]
     conflictstyle = diff3
