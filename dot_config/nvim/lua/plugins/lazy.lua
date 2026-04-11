@@ -1,5 +1,7 @@
 ---@type LazySpec
 return {
+  -- Disable aerial.nvim (because of treesitter errors; tenative approach)
+  { "stevearc/aerial.nvim", enabled = false },
   -- use haskell tools
   {
     "mrcjkb/haskell-tools.nvim",
@@ -206,7 +208,7 @@ return {
         jre_path = nil,
         jdk_for_symbol_resolution = nil,
         jvm_args = {
-          "-Xmx4g",
+          "-Xmx8g",
         },
         inlay_hints = {
           enabled = true, -- Enable inlay hints (auto-enable on LSP attach)
@@ -232,9 +234,7 @@ return {
           local client = vim.lsp.get_client_by_id(args.data.client_id)
           if not client or client.name ~= "kotlin_ls" then return end
           local buf = args.buf
-          local map = function(lhs, fn, desc)
-            vim.keymap.set("n", lhs, fn, { buffer = buf, desc = desc })
-          end
+          local map = function(lhs, fn, desc) vim.keymap.set("n", lhs, fn, { buffer = buf, desc = desc }) end
           if client:supports_method "textDocument/references" then
             map("grr", function() require("snacks.picker").lsp_references() end, "LSP References")
           end
