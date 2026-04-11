@@ -223,6 +223,33 @@ return {
           kotlin_time = true, -- Show kotlin.time warnings
         },
       }
+
+      -- kotlin.nvim bypasses AstroLSP by calling vim.lsp.config/vim.lsp.enable directly,
+      -- so picker-lsp-mappings (grr, gd, etc.) are not applied. Re-apply them here.
+      vim.api.nvim_create_autocmd("LspAttach", {
+        group = vim.api.nvim_create_augroup("kotlin_lsp_picker_mappings", { clear = true }),
+        callback = function(args)
+          local client = vim.lsp.get_client_by_id(args.data.client_id)
+          if not client or client.name ~= "kotlin_ls" then return end
+          local buf = args.buf
+          local map = function(lhs, fn, desc)
+            vim.keymap.set("n", lhs, fn, { buffer = buf, desc = desc })
+          end
+          if client:supports_method "textDocument/references" then
+            map("grr", function() require("snacks.picker").lsp_references() end, "LSP References")
+          end
+          if client:supports_method "textDocument/implementation" then
+            map("gri", function() require("snacks.picker").lsp_implementations() end, "LSP Implementations")
+          end
+          if client:supports_method "textDocument/definition" then
+            map("gd", function() require("snacks.picker").lsp_definitions() end, "LSP Definitions")
+          end
+          if client:supports_method "textDocument/typeDefinition" then
+            map("gy", function() require("snacks.picker").lsp_type_definitions() end, "LSP Type Definitions")
+          end
+          map("gO", function() require("snacks.picker").lsp_symbols() end, "LSP Document Symbols")
+        end,
+      })
     end,
     keys = {
       { "<leader>ko", "<cmd>KotlinOrganizeImports<cr>", desc = "Organize imports", ft = "kotlin" },
