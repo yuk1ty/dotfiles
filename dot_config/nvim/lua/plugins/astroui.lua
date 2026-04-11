@@ -14,6 +14,8 @@ return {
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },
+        Visual = { bg = "#313244" }, -- Catppuccin Mocha Surface0 (subtler selection)
+        StatusLine = { bg = "NONE" },
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" },
