@@ -222,20 +222,18 @@ return {
           value_ranges = true, -- Show value ranges
           kotlin_time = true, -- Show kotlin.time warnings
         },
-        keymap = {
-          goto_definition = "gd",
-          goto_type_definition = "gD",
-          goto_implementation = "gi",
-          find_references = "gr",
-          show_hover = "K",
-          show_signature_help = "gs",
-          organize_imports = "<leader>ko",
-          add_missing_imports = "<leader>ka",
-          remove_unused_imports = "<leader>kR",
-          show_inlay_hints = "<leader>kh",
-          set_jdk = "<leader>kj",
-        },
       }
     end,
+    keys = {
+      { "<leader>ko", "<cmd>KotlinOrganizeImports<cr>", desc = "Organize imports", ft = "kotlin" },
+      { "<leader>kf", "<cmd>KotlinFormat<cr>", desc = "Format buffer", ft = "kotlin" },
+      { "<leader>ks", "<cmd>KotlinSymbols<cr>", desc = "Document symbols", ft = "kotlin" },
+      { "<leader>ka", "<cmd>KotlinCodeActions<cr>", desc = "Code actions", ft = "kotlin" },
+      { "<leader>kq", "<cmd>KotlinQuickFix<cr>", desc = "Quick fix", ft = "kotlin" },
+      { "<leader>kh", "<cmd>KotlinInlayHintsToggle<cr>", desc = "Toggle inlay hints", ft = "kotlin" },
+      { "<leader>kn", "<cmd>KotlinRename<cr>", desc = "Rename symbol", ft = "kotlin" },
+      { "<leader>ki", "<cmd>KotlinImplementation<cr>", desc = "Go to implementation", ft = "kotlin" },
+      { "<leader>kt", "<cmd>KotlinTypeDefinition<cr>", desc = "Go to type definition", ft = "kotlin" },
+    },
   },
 }
