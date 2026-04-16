@@ -16,6 +16,12 @@ return {
         transparent = true,
         solid = false,
       },
+      custom_highlights = function(colors)
+        return {
+          SidekickDiffAdd = { fg = colors.green },
+          SidekickDiffDelete = { fg = colors.red },
+        }
+      end,
     },
   },
 
