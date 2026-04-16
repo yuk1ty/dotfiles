@@ -9,7 +9,7 @@ ARGS=()
 for ws in "${WORKSPACES[@]}"; do
   VISIBLE=off
   BG_DRAWING=off
-  ICON_COLOR=0xffffffff
+  ICON_COLOR=0xffeba0ac
 
   if echo "$NON_EMPTY" | grep -qx "$ws"; then
     VISIBLE=on
@@ -18,7 +18,7 @@ for ws in "${WORKSPACES[@]}"; do
   if [ "$ws" = "$FOCUSED" ]; then
     VISIBLE=on
     BG_DRAWING=on
-    ICON_COLOR=0xff000000
+    ICON_COLOR=0xff181825
   fi
 
   ARGS+=(--set "aerospace.$ws"

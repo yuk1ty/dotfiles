@@ -12,7 +12,7 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar position=top height=25 blur_radius=30 color=0x40000000
+sketchybar --bar position=top height=25 blur_radius=30 color=0xd91e1e2e
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
@@ -24,8 +24,8 @@ default=(
   padding_right=5
   icon.font="Hack Nerd Font:Bold:14.0"
   label.font="Hack Nerd Font:Bold:12.0"
-  icon.color=0xffffffff
-  label.color=0xffffffff
+  icon.color=0xffeba0ac
+  label.color=0xffeba0ac
   icon.padding_left=4
   icon.padding_right=4
   label.padding_left=4
@@ -42,9 +42,10 @@ for ws in "${AEROSPACE_WORKSPACES[@]}"; do
   sketchybar --add item "aerospace.$ws" left \
              --set "aerospace.$ws" \
                    icon="$ws" \
+                   icon.color=0xffeba0ac \
                    icon.padding_left=7 \
                    icon.padding_right=7 \
-                   background.color=0x40ffffff \
+                   background.color=0xffeba0ac \
                    background.corner_radius=5 \
                    background.height=25 \
                    label.drawing=off \
