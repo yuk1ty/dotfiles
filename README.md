@@ -57,13 +57,35 @@ Apply my settings.
 chezmoi apply
 ```
 
-## Install apps via homebrew
+## Install CLI tools via devbox (Nix)
 
-I'm using `Brewfile` to manage what apps will be installed. Run the following command:
+CLI tools are managed globally by [devbox](https://www.jetify.com/devbox) (backed by Nix). The `chezmoi apply` hook installs devbox and syncs the global package set automatically. To re-sync manually:
+
+```
+devbox global install
+```
+
+The source of truth is `~/.local/share/devbox/global/default/devbox.json`, which is managed by chezmoi.
+
+## Install GUI apps, fonts, and macOS-specific tools via Homebrew
+
+GUI applications, fonts, and macOS-only / system-level tooling stay on Homebrew. Run:
 
 ```
 brew bundle
 ```
+
+### One-time cleanup after migrating to devbox
+
+If you are migrating an existing machine from the old Homebrew-only setup, CLI tools that have been moved to devbox (`eza`, `ripgrep`, `neovim`, etc.) will still be installed via Homebrew. They won't break anything because devbox's PATH takes precedence, but they waste disk space and keep getting upgraded by `brew upgrade`.
+
+Run the following **once** to uninstall any Homebrew formulae/casks that are no longer declared in the `Brewfile`:
+
+```
+brew bundle cleanup --global --force
+```
+
+This is intentionally not automated — run it only after you have verified that `devbox global install` succeeded and the devbox-provided tools are working as expected.
 
 ## Install tpm and tmux theme
 

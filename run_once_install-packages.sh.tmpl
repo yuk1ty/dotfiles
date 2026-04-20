@@ -5,15 +5,27 @@ if ! type rustup > /dev/null 2>&1; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
-# Install tools managed by homebrew
+# Install GUI apps, fonts, and macOS-specific tools via Homebrew
 {{ if eq .chezmoi.os "darwin" }}
 if ! type xcode-select > /dev/null 2>&1; then
   xcode-select --install
 fi
-brew bundle --global
+if type brew > /dev/null 2>&1; then
+  brew bundle --global
+fi
 {{ end }}
 
-# Install mise dependencies
+# Install devbox (Nix-based) for CLI tools
+if ! type devbox > /dev/null 2>&1; then
+  curl -fsSL https://get.jetify.com/devbox | bash -s -- -f
+fi
+
+# Sync global devbox packages from the chezmoi-managed devbox.json
+if type devbox > /dev/null 2>&1; then
+  devbox global install
+fi
+
+# Install mise dependencies (language runtimes)
 if type mise > /dev/null 2>&1; then
   mise install
 fi
