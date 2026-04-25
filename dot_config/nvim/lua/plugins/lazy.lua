@@ -1,7 +1,5 @@
 ---@type LazySpec
 return {
-  -- Disable aerial.nvim (because of treesitter errors; tenative approach)
-  { "stevearc/aerial.nvim", enabled = false },
   -- use haskell tools
   {
     "mrcjkb/haskell-tools.nvim",
