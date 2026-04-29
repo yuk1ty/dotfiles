@@ -3,7 +3,11 @@ after-startup-command = [
   'exec-and-forget sketchybar',
 ]
 start-at-login = true
-exec-on-workspace-change = ['/bin/bash', '-c', 'sketchybar --trigger aerospace_workspace_change']
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_change',
+]
 
 [gaps]
 inner.horizontal = 10
@@ -79,6 +83,7 @@ alt-shift-a = 'move-node-to-workspace A'
 alt-shift-b = 'move-node-to-workspace B'
 alt-shift-c = 'move-node-to-workspace C'
 alt-shift-d = 'move-node-to-workspace D'
+# For editors (like VSCode, Zed)
 alt-shift-e = 'move-node-to-workspace E'
 alt-shift-g = 'move-node-to-workspace G'
 alt-shift-i = 'move-node-to-workspace I'
@@ -88,7 +93,9 @@ alt-shift-o = 'move-node-to-workspace O'
 alt-shift-p = 'move-node-to-workspace P'
 alt-shift-q = 'move-node-to-workspace Q'
 alt-shift-r = 'move-node-to-workspace R'
+# For Slack and other communication apps
 alt-shift-s = 'move-node-to-workspace S'
+# For terminal apps
 alt-shift-t = 'move-node-to-workspace T'
 alt-shift-u = 'move-node-to-workspace U'
 alt-shift-v = 'move-node-to-workspace V'
@@ -108,7 +115,11 @@ run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace W'
+run = 'move-node-to-workspace T'
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace T'
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
@@ -124,7 +135,11 @@ run = 'move-node-to-workspace I'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
-run = 'move-node-to-workspace V'
+run = 'move-node-to-workspace E'
+
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
+run = 'move-node-to-workspace E'
 
 [[on-window-detected]]
 if.app-id = 'com.teamflowhq.desktopApp'
