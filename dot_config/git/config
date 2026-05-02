@@ -58,7 +58,7 @@ pf = push --force-with-lease --force-if-includes origin HEAD
     driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 
 [diff]
-    colorMoved = default
+    external = difft
 
 [ghq]
 root = ~/github

@@ -55,10 +55,16 @@ return {
       "folke/snacks.nvim",
       "kyazdani42/nvim-web-devicons",
     },
-    cmd = { "Octo" },
+    cmd = { "Octo", "OctoReviewQueue" },
     opts = {
       picker = "snacks",
     },
+    config = function(_, opts)
+      require("octo").setup(opts)
+      vim.api.nvim_create_user_command("OctoReviewQueue", function()
+        vim.cmd([[Octo pr list search="is:open is:pr review-requested:@me"]])
+      end, { desc = "List PRs where I'm requested as a reviewer" })
+    end,
   },
   -- Pretty Markdown
   {
