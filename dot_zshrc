@@ -20,6 +20,7 @@ alias grep='rg'
 alias ll='eza --icons -lah'
 alias llt='eza --icons -lah -T -L2'
 alias ls='eza --icons'
+alias claude='lapdog claude'
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform

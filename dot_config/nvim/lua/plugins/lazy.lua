@@ -126,6 +126,11 @@ return {
           backend = "tmux",
           enabled = false,
         },
+        tools = {
+          claude = {
+            cmd = { "lapdog", "claude" },
+          },
+        },
       },
     },
     keys = {
