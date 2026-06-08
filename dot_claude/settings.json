@@ -72,7 +72,6 @@
 			"Bash(gh api --method DELETE:*)"
 		]
 	},
-	"model": "opus[1m]",
 	"statusLine": {
 		"type": "command",
 		"command": "~/.claude/statusline",
@@ -91,6 +90,12 @@
 			"source": {
 				"source": "github",
 				"repo": "DataDog/dd-apm-test-agent"
+			}
+		},
+		"headroom-marketplace": {
+			"source": {
+				"source": "github",
+				"repo": "chopratejas/headroom"
 			}
 		}
 	},
