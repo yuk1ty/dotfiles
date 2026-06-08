@@ -1,6 +1,6 @@
 [tools]
 # Programming Languages
-python = "latest"
+python = "3.13.13"
 java = ["17", "21"]
 go = "latest"
 gleam = "latest"
@@ -25,3 +25,7 @@ terraform = ["1.9.5"]
 [settings]
 legacy_version_file_disable_tools = ["terraform"]
 experimental = true
+
+[task.install_tools]
+description = "Install tools specified in the configuration file."
+command = "pip install headroom-ai[all]"
