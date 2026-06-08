@@ -26,6 +26,6 @@ terraform = ["1.9.5"]
 legacy_version_file_disable_tools = ["terraform"]
 experimental = true
 
-[task.install_tools]
+[tasks.install_tools]
 description = "Install tools specified in the configuration file."
-command = "pip install headroom-ai[all]"
+run = "pip install headroom-ai[all]"
