@@ -7,45 +7,30 @@ description: >
 context: main
 ---
 
-You are orchestrating a three-phase development workflow. Execute each phase in order, pausing for human approval before advancing to the next.
+You are orchestrating a four-phase development workflow. Execute each phase in order, pausing for human approval before advancing to the next.
 
 ## Phase 1: Research
 
 Use the `Skill` tool to invoke the `researcher` skill. Pass the feature/topic from the user's original request as context.
 
-After `researcher` completes, use `AskUserQuestion` to ask the user:
-- "Research is complete. Does it look good to proceed to annotation fixing?"
+After `researcher` completes, follow the **Annotation Review** procedure below, then move to Phase 2.
 
-If the user approves, move to Phase 2. If they have feedback, address it first.
+## Annotation Review Procedure
 
-## Phase 2: Annotation Fixing
+Use this procedure after Phase 1 and Phase 2 complete.
 
-Use the `Skill` tool to invoke the `annotation-fixer` skill.
+1. Use `AskUserQuestion` to tell the user: "Please review the output. If you have any feedback, add `// ANNOT: <your comment>` annotations to the document, then let me know."
+2. Once the user confirms they are done reviewing, use `AskUserQuestion` to ask: "Would you like to run annotation-fixer to apply your annotations, or skip?"
+   - If the user chooses to run: invoke the `annotation-fixer` skill, then proceed to the next phase.
+   - If the user chooses to skip: proceed to the next phase directly.
 
-After `annotation-fixer` completes, use `AskUserQuestion` to ask the user:
-- "Annotation fixing is complete. Does it look good to proceed to planning?"
-
-If the user approves, move to Phase 3. If they have feedback, address it first.
-
-## Phase 3: Planning
+## Phase 2: Planning
 
 Use the `Skill` tool to invoke the `my-planner` skill.
 
-After `my-planner` completes, use `AskUserQuestion` to ask the user:
-- "The implementation plan is ready. Does it look good to proceed to implementation?"
+After `my-planner` completes, follow the **Annotation Review** procedure above, then move to Phase 3.
 
-If the user approves, move to Phase 4. If they have feedback, address it first.
-
-## Phase 4: Annotation Fixing
-
-Use the `Skill` tool to invoke the `annotation-fixer` skill.
-
-After `annotation-fixer` completes, use `AskUserQuestion` to ask the user:
-- "Annotation fixing is complete. Does it look good to proceed to implementation?"
-
-If the user approves, move to Phase 5. If they have feedback, address it first.
-
-## Phase 5: Implementation
+## Phase 3: Implementation
 
 Use the `Skill` tool to invoke the `feature-implementor` skill.
 
