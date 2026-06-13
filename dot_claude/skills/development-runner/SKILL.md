@@ -32,6 +32,20 @@ After `my-planner` completes, follow the **Annotation Review** procedure above, 
 
 ## Phase 3: Implementation
 
-Use the `Skill` tool to invoke the `feature-implementor` skill.
+### Step 3-1: Task Decomposition
 
-After `feature-implementor` completes, inform the user that implementation is complete and ask them to review the changes.
+Use the `Agent` tool to spawn a subagent with the following prompt:
+
+> Read the implementation plan from `.claude/user/plan/`. Analyze each step and identify which tasks can run in parallel (no shared files, no logical dependency between them) and which must run sequentially. Output the result as `.claude/user/plan/task-graph.md`, listing tasks grouped into sequential stages and parallel batches within each stage.
+
+### Step 3-2: Task Execution
+
+After the decomposer subagent completes, use the `Agent` tool to spawn a subagent with the following prompt:
+
+> Read the task graph from `.claude/user/plan/task-graph.md`. Execute each task unit using the `Agent` tool:
+> - For tasks within a parallel batch: spawn all their agents simultaneously.
+> - For sequential stages: wait for all agents in the current stage to finish before starting the next.
+>
+> Each agent implements its assigned task using TDD (Red-Green-Refactor), touching only the files listed for that task.
+
+After all task agents complete, inform the user that implementation is complete and ask them to review the changes.
