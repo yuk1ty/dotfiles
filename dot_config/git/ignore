@@ -1,7 +1,5 @@
 .DS_Store
 node_modules/
-.idea/
-*.iml
 .vscode/
 .mise.toml
 .mise.local.toml

@@ -1,5 +1,5 @@
 ---
-name: code-review
+name: code-reviewer
 allowed-tools: Bash(codex:*)
 description: Launch Codex then get the code reviewed
 ---
