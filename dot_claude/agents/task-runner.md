@@ -5,6 +5,6 @@ model: sonnet
 isolation: worktree
 ---
 
-Execute the task list. Spawn one subagent per task.
+Execute the task list. Spawn one subagent per task by using `subagent_type: implementor`.
 
 Supervise all subagents until they finish. Once every task is complete, notify the caller.

@@ -34,18 +34,10 @@ After `my-planner` completes, follow the **Annotation Review** procedure above, 
 
 ### Step 3-1: Task Decomposition
 
-Use the `Agent` tool to spawn a subagent with the following prompt:
-
-> Read the implementation plan from `.claude/user/plan/`. Analyze each step and identify which tasks can run in parallel (no shared files, no logical dependency between them) and which must run sequentially. Output the result as `.claude/user/plan/task-graph.md`, listing tasks grouped into sequential stages and parallel batches within each stage.
+Use the `Agent` tool with `subagent_type: task-decomposer` to launch the task-decomposer agent. Pass the path to the implementation plan (`.claude/user/plan/`) as context.
 
 ### Step 3-2: Task Execution
 
-After the decomposer subagent completes, use the `Agent` tool to spawn a subagent with the following prompt:
-
-> Read the task graph from `.claude/user/plan/task-graph.md`. Execute each task unit using the `Agent` tool:
-> - For tasks within a parallel batch: spawn all their agents simultaneously.
-> - For sequential stages: wait for all agents in the current stage to finish before starting the next.
->
-> Each agent implements its assigned task using TDD (Red-Green-Refactor), touching only the files listed for that task.
+After the decomposer subagent completes, use the `Agent` tool with `subagent_type: task-runner` to launch the task-runner agent. Pass the path to the task graph (`.claude/user/plan/task-graph.md`) as context.
 
 After all task agents complete, inform the user that implementation is complete and ask them to review the changes.

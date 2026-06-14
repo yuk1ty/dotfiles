@@ -3,6 +3,7 @@ name: feature-implementor
 description: >
   Implement features using Kent Beck's Test-Driven Development (TDD) methodology. Use this skill when the user asks to write code via TDD, follow the Red-Green-Refactor cycle, or build a feature test-first. Guides the workflow of building a test list, writing one failing test at a time, making it pass with minimal production code, and refactoring before moving to the next test.
 model: sonnet
+effort: xhigh
 context: fork
 ---
 
