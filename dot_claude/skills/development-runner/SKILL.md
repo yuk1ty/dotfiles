@@ -40,4 +40,28 @@ Use the `Agent` tool with `subagent_type: task-decomposer` to launch the task-de
 
 After the decomposer subagent completes, use the `Agent` tool with `subagent_type: task-runner` to launch the task-runner agent. Pass the path to the task graph (`.claude/user/plan/task-graph.md`) as context.
 
-After all task agents complete, inform the user that implementation is complete and ask them to review the changes.
+After all task agents complete, note the worktree branch returned in the `task-runner` result. Run `git checkout <branch>` via the `Bash` tool to switch the current working directory to that branch before proceeding to Phase 4.
+
+## Phase 4: Code Review
+
+Run the following loop until the code-reviewer returns APPROVE:
+
+1. Use the `Agent` tool with `subagent_type: code-reviewer` to review the current changes.
+2. If the result is **REQUEST_CHANGES**: apply every finding autonomously, then return to step 1.
+3. If the result is **APPROVE**: exit the loop.
+
+Once approved, proceed to Phase 5.
+
+## Phase 5: Document Sync
+
+Use the `Agent` tool to spawn a subagent with the following prompt:
+
+> Compare the actual implementation on the current branch against the documents produced in earlier phases:
+> - Research document: `.claude/user/research/`
+> - Implementation plan: `.claude/user/plan/`
+>
+> Identify any discrepancies — features added, removed, or changed during implementation that are not reflected in the documents. For each discrepancy found, update the relevant document to match the actual implementation.
+>
+> Report a summary of what was updated.
+
+After the subagent completes, inform the user the workflow is complete.
