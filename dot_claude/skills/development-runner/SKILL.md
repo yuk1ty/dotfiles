@@ -17,12 +17,12 @@ After `researcher` completes, follow the **Annotation Review** procedure below, 
 
 ## Annotation Review Procedure
 
-Use this procedure after Phase 1 and Phase 2 complete.
+Use this procedure after Phase 1 and Phase 2 complete. Run the following loop until the user approves.
 
-1. Use `AskUserQuestion` to tell the user: "Please review the output. If you have any feedback, add `// ANNOT: <your comment>` annotations to the document, then let me know."
-2. Once the user confirms they are done reviewing, use `AskUserQuestion` to ask: "Would you like to run annotation-fixer to apply your annotations, or skip?"
-   - If the user chooses to run: invoke the `annotation-fixer` skill, then proceed to the next phase.
-   - If the user chooses to skip: proceed to the next phase directly.
+1. Use `AskUserQuestion` to tell the user: "Please review the output. If you have any feedback, add `// ANNOT: <your comment>` annotations to the document, then let me know. If everything looks good, reply 'approve'."
+2. Once the user responds:
+   - If the user replies **approve** (or equivalent): exit the loop and proceed to the next phase.
+   - Otherwise: invoke the `annotation-fixer` skill to apply the annotations, then return to step 1.
 
 ## Phase 2: Planning
 
