@@ -71,12 +71,28 @@ return {
           desc = "Close buffer from tabline",
         },
 
+        -- herdr: send the current file path to the first coding agent in this tab
+        ["<Leader>z"] = { desc = "herdr" },
+        ["<Leader>zf"] = {
+          function() require("utils.herdr").send_file_to_agent() end,
+          desc = "Send file path to herdr agent",
+        },
+
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      -- visual mode mappings
+      x = {
+        -- herdr: send file path + selected line range, e.g. @path#L10-22
+        ["<Leader>z"] = { desc = "herdr" },
+        ["<Leader>zl"] = {
+          function() require("utils.herdr").send_selection_to_agent() end,
+          desc = "Send file path + line range to herdr agent",
+        },
       },
     },
   },
