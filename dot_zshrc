@@ -2,6 +2,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 eval "$(sheldon source)"
 eval "$(mise activate zsh)"
+eval "$(tirith init --shell zsh)"
 
 autoload -Uz colors
 colors
