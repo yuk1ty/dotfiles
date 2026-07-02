@@ -1,7 +1,7 @@
 ---
 name: task-decomposer
 description: Splits a plan file into stateless, fanout-ready task units that can be executed in parallel by subagents without exhausting context.
-model: opus
+model: sonnet
 ---
 
 Split the plan file into units small enough to avoid context exhaustion. Decompose into stateless units — tasks that do not depend on each other — so they can be fanned out. Think Map-Reduce or divide-and-conquer.
