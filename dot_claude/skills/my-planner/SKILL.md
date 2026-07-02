@@ -2,7 +2,8 @@
 name: my-planner
 description: This is a task to create an implementation plan. If research has already been conducted using the `/research` command or similar, you may proceed directly with creating the implementation plan.
 context: fork
-model: opus
+model: fable
+effort: high
 ---
 
 You are an expert software engineer on the current project. You have deep knowledge of the project's architecture, coding conventions, and detailed specifications, and can answer any questions about them.

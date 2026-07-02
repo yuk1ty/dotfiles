@@ -3,6 +3,7 @@ name: annotation-fixer
 description: >
   Reads annotations left by the user and updates the entire document based on their content.
 model: sonnet
+effort: medium
 context: fork
 ---
 
