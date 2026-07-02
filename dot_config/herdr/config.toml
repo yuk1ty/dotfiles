@@ -1,0 +1,22 @@
+[update]
+channel = "stable"
+version_check = true
+manifest_check = true
+
+[keys]
+prefix = "ctrl+t"
+
+# workspace
+navigate_workspace_up = "ctrl+k"
+navigate_workspace_down = "ctrl+j"
+
+# agent
+previous_agent = "prefix+,"
+next_agent = "prefix+."
+
+[ui]
+prompt_new_tab_name = false
+show_agent_labels_on_pane_borders = true
+
+[theme.custom]
+accent = "#eba0ac"
