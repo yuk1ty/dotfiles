@@ -1,13 +1,14 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "theme": "catppuccin",
-  "lsp": {
-    "kotlin-ls": {
-      "disabled": true
-    },
-    "kotlin": {
-      "command": ["kotlin-lsp", "--stdio"],
-      "extensions": [".kt", ".kts"]
-    }
-  }
+	"$schema": "https://opencode.ai/config.json",
+	"theme": "catppuccin",
+	"formatter": true,
+	"lsp": {
+		"kotlin-ls": {
+			"disabled": true
+		},
+		"kotlin": {
+			"command": ["kotlin-lsp", "--stdio"],
+			"extensions": [".kt", ".kts"]
+		}
+	}
 }
