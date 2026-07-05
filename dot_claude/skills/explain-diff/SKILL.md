@@ -1,6 +1,8 @@
 ---
 name: explain-diff
 description: Use when the user asks for a rich explanation of a code change, diff, branch, or PR. Produces HTML output.
+context: fork
+model: Sonnet
 ---
 
 # Explain Diff
