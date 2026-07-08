@@ -10,5 +10,20 @@
 			"command": ["kotlin-lsp", "--stdio"],
 			"extensions": [".kt", ".kts"]
 		}
+	},
+	"permission": {
+		"bash": {
+			"git *": "allow",
+			"gh *": "allow",
+			"rm *": "ask"
+		},
+		"external_directory": {
+			"/tmp/**": "allow"
+		},
+		"read": {
+			"*.env": "deny",
+			"*.env.*": "deny",
+			"*.env.example": "allow"
+		}
 	}
 }
