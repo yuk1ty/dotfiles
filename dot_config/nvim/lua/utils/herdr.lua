@@ -106,7 +106,14 @@ function M.send_file_to_agent() send_path(nil) end
 
 --- Send the current buffer's file path plus the selected line range, e.g.
 --- `@lua/utils/herdr.lua#L10-22`. Intended for visual-mode mappings; reads the
---- `'<` and `'>` marks set when leaving visual mode.
-function M.send_selection_to_agent() send_path { vim.fn.line "'<", vim.fn.line "'>" } end
+--- current selection via the `v` mark and cursor position, which are valid
+--- *while still in visual mode*, unlike `'<`/`'>` which are not updated until
+--- visual mode is exited (and return 0 on a fresh buffer).
+function M.send_selection_to_agent() send_path { vim.fn.line "v", vim.fn.line "." } end
+
+--- Send the current buffer's file path plus the current cursor line,
+--- e.g. `@lua/utils/herdr.lua#L42`. Intended for normal-mode use when no
+--- selection has been made.
+function M.send_line_to_agent() send_path { vim.fn.line ".", vim.fn.line "." } end
 
 return M
