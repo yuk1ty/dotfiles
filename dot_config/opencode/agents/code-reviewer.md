@@ -1,7 +1,7 @@
 ---
 description: Senior code reviewer that evaluates changes across five dimensions — correctness, readability, architecture, security, and performance. Use for thorough code review before merge.
 mode: subagent
-model: zhipuai/glm-5.2
+model: opencode-go/glm-5.2
 permission:
   edit: deny
   bash:

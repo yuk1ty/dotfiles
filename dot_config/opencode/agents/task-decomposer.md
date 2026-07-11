@@ -1,7 +1,7 @@
 ---
 description: Splits a plan file into stateless, fanout-ready task units that can be executed in parallel by subagents without exhausting context.
 mode: subagent
-model: zhipuai/glm-5.2
+model: opencode-go/glm-5.2
 permission:
   edit: deny
 ---

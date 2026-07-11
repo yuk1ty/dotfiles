@@ -1,7 +1,7 @@
 ---
 description: Produces a rich interactive HTML explanation of a code change, diff, branch, or PR.
 mode: subagent
-model: zhipuai/glm-5.2
+model: opencode-go/glm-5.2
 ---
 
 # Explain Diff

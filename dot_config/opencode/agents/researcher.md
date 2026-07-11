@@ -1,7 +1,7 @@
 ---
 description: Conducts thorough pre-task research to deeply understand the structure of code areas targeted for modification. Use before implementing new features, fixing bugs, or refactoring.
 mode: subagent
-model: deepseek/deepseek-v4-flash:high
+model: opencode-go/deepseek-v4-flash
 permission:
   edit: deny
 ---

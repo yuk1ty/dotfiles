@@ -1,7 +1,7 @@
 ---
 description: Orchestrates the full development workflow: research → plan → implement, with human review checkpoints between each phase. Use this agent when starting to implement a new feature end-to-end.
 mode: subagent
-model: zhipuai/glm-5.2
+model: opencode-go/glm-5.2
 permission:
   task:
     "*": "allow"

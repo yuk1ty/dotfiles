@@ -1,7 +1,7 @@
 ---
 description: Executes a task list by spawning one subagent per task. Supervises all subagents and notifies the caller when every task has completed.
 mode: subagent
-model: deepseek/deepseek-v4-flash:high
+model: opencode-go/deepseek-v4-flash
 permission:
   task:
     "*": "allow"

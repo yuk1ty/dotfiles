@@ -1,7 +1,7 @@
 ---
 description: Creates an implementation plan using TDD methodology. Use after research is complete to break down a feature into ordered Red-Green-Refactor steps.
 mode: subagent
-model: zhipuai/glm-5.2
+model: opencode-go/glm-5.2
 permission:
   edit: deny
 ---

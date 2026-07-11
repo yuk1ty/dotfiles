@@ -1,7 +1,7 @@
 ---
 description: Executes a single assigned task. Spawned per task unit by the task-runner to implement one TDD cycle in isolation.
 mode: subagent
-model: moonshot-ai/kimi-k2.7-code
+model: opencode-go/kimi-k2.7-code
 ---
 
 Implement using Kent Beck's TDD.
