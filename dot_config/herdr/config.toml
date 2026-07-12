@@ -18,5 +18,9 @@ next_agent = "prefix+."
 prompt_new_tab_name = false
 show_agent_labels_on_pane_borders = true
 
+[ui.toast]
+delivery = "herdr"
+delay_seconds = 1
+
 [theme.custom]
 accent = "#eba0ac"
