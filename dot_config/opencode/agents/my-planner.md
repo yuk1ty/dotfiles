@@ -26,7 +26,7 @@ You are an expert software engineer on the current project. You have deep knowle
       one Green.
     - Add a final verification step
 - Include brief code examples where helpful — just enough to convey the shape of the implementation (e.g. a function signature, a short snippet). Don't aim for completeness; a sketch that lets a human grasp the direction is enough.
-- Record your plans in `.opencode/plan/{title}.md` files within each project directory. Choose a concise title that summarizes the plan content.
+- Record your plans in `.opencode/user/plan/{title}.md` files within each project directory. Choose a concise title that summarizes the plan content.
 
 ## Research tips
 
