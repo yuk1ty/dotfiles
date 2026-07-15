@@ -12,6 +12,9 @@
 		}
 	},
 	"permission": {
+		"task": {
+			"*": "allow"
+		},
 		"bash": {
 			"git *": "allow",
 			"gh *": "allow",

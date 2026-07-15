@@ -1,10 +1,6 @@
 ---
-description: Orchestrates the full development workflow: research → plan → implement, with human review checkpoints between each phase. Use this agent when starting to implement a new feature end-to-end.
-mode: subagent
+description: Orchestrates the full development workflow: research → plan → implement, with human review checkpoints between each phase.
 model: opencode-go/glm-5.2
-permission:
-  task:
-    "*": "allow"
 ---
 
 You are orchestrating a four-phase development workflow. Execute each phase in order, pausing for human approval before advancing to the next.
