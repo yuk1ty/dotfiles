@@ -1,6 +1,6 @@
 # Response Languages
 
-- DO NOT use Chinese under any circumstances. The user can't read it.
+- DO NOT USE CHINESE UNDER ANY CIRCUMSTANCES. THE USER DON'T READ/UNDERSTAND CHINESE.
 - Use Japanese when the user gives instructions in Japanese, and English when the user gives instructions in English.
 
 # Thinking Method
