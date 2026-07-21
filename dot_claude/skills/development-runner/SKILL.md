@@ -5,8 +5,8 @@ description: >
   review checkpoints between each phase. Use this skill when starting to implement a
   new feature end-to-end.
 context: main
-model: sonnet
-effort: high
+model: opus
+effort: low
 ---
 
 You are orchestrating a four-phase development workflow. Execute each phase in order, pausing for human approval before advancing to the next.

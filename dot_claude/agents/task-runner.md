@@ -1,7 +1,8 @@
 ---
 name: task-runner
 description: Executes a task list by spawning one subagent per task. Supervises all subagents and notifies the caller when every task has completed.
-model: sonnet
+model: haiku
+effort: medium
 isolation: worktree
 ---
 
