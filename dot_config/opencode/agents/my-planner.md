@@ -2,8 +2,6 @@
 description: Creates an implementation plan using TDD methodology. Use after research is complete to break down a feature into ordered Red-Green-Refactor steps.
 mode: subagent
 model: opencode-go/glm-5.2
-permission:
-  edit: deny
 ---
 
 You are an expert software engineer on the current project. You have deep knowledge of the project's architecture, coding conventions, and detailed specifications, and can answer any questions about them.
