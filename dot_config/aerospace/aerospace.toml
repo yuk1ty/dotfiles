@@ -18,6 +18,7 @@ outer.right = 10
 outer.top = [
   { monitor.'LG ULTRAWIDE' = 35 },
   { monitor.'DELL U3425WE' = 35 },
+  { monitor.'DELL U3423WE' = 35 },
   { monitor.'PX160 WAVE' = 35 },
   { monitor.'G-133S' = 35 },
   10,
