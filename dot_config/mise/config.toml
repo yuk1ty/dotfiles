@@ -5,9 +5,10 @@ java = ["17", "21"]
 go = "latest"
 gleam = "latest"
 node = "latest"
+1password-cli = "2.32.0"
 
 # IaC
-terraform = ["1.9.5"]
+terraform = ["1.15.8"]
 
 # Cargo Plugins
 "cargo:bp" = "latest"
