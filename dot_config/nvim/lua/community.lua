@@ -25,7 +25,6 @@ return {
     },
   },
 
-  { import = "astrocommunity.pack.biome" },
   { import = "astrocommunity.pack.dart" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
@@ -37,6 +36,10 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.terraform" },
+  { import = "astrocommunity.pack.python.base" },
+  { import = "astrocommunity.pack.python.basedpyright" },
+  { import = "astrocommunity.pack.python.ruff" },
+  { import = "astrocommunity.pack.python.ty" },
   -- { import = "astrocommunity.programming-language-support.rest-nvim" },
 
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
