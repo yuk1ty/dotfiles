@@ -1,5 +1,5 @@
 # Sets user-defined palette
-palette = "catppuccin_macchiato"
+palette = "catppuccin_mocha"
 
 [character]
 # Note the use of Catppuccin color 'maroon'
