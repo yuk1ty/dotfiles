@@ -1,7 +1,7 @@
 ---
 description: Senior code reviewer that evaluates changes across five dimensions — correctness, readability, architecture, security, and performance. Use for thorough code review before merge.
 mode: subagent
-model: opencode-go/deepseek-v4-pro
+model: opencode-go/glm-5.3
 permission:
   edit: deny
   webfetch: allow
