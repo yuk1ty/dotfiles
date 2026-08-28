@@ -4,6 +4,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # run `brew` command without any updates
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# home-manager session variables (JAVA_HOME etc.) managed by nix-darwin
+[ -f "/etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh" ] && source "/etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh"
+
 # Individual tools setup
 # for cargo, to be able to access crates on GitHub
 export CARGO_NET_GIT_FETCH_WITH_CLI=true

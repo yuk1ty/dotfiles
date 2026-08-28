@@ -5,12 +5,29 @@ if ! type rustup > /dev/null 2>&1; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
-# Install tools managed by homebrew
 {{ if eq .chezmoi.os "darwin" }}
 if ! type xcode-select > /dev/null 2>&1; then
   xcode-select --install
 fi
-brew bundle --global
+
+# ユーザー名から flake の設定名を解決 (nix/flake.nix の darwinConfigurations)
+case "$(whoami)" in
+  toyoda)    nix_config="work" ;;
+  helloyuki) nix_config="private" ;;
+  *) echo "unknown user: $(whoami). add a mapping in run_once_install-packages.sh.tmpl" >&2; exit 1 ;;
+esac
+
+if ! type nix > /dev/null 2>&1; then
+  curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install | sh
+fi
+
+# Build and switch the nix-darwin system (CLI tools, GUI apps, system settings)
+# See: ~/.local/share/chezmoi/nix
+if [ -x /run/current-system/sw/bin/darwin-rebuild ]; then
+  sudo /run/current-system/sw/bin/darwin-rebuild switch --flake "$HOME/.local/share/chezmoi/nix#$nix_config"
+else
+  sudo nix run nix-darwin -- switch --flake "$HOME/.local/share/chezmoi/nix#$nix_config"
+fi
 {{ end }}
 
 # Install mise dependencies

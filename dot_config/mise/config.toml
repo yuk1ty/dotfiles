@@ -1,32 +1,5 @@
-[tools]
-# Programming Languages
-python = "3.13.13"
-java = ["17", "21"]
-go = "latest"
-gleam = "latest"
-node = "latest"
-1password-cli = "2.32.0"
-
-# IaC
-terraform = ["1.15.8"]
-
-# Cargo Plugins
-"cargo:bp" = "latest"
-"cargo:cargo-wizard" = "latest"
-"cargo:cargo-make" = "latest"
-"cargo:cargo-machete" = "latest"
-"cargo:cargo-sort" = "latest"
-"cargo:cargo-features-manager" = "latest"
-"cargo:cargo-chef" = "latest"
-"cargo:mergiraf" = "latest"
-
-# Go Packages
-"go:github.com/d-kuro/gwq/cmd/gwq" = "latest"
-
+# グローバルツール・ランタイムは Nix (nix/home/default.nix) で管理。
+# このファイルはプロジェクト固有のバージョン切り替えにのみ使用する。
 [settings]
 legacy_version_file_disable_tools = ["terraform"]
 experimental = true
-
-[tasks.install_tools]
-description = "Install tools specified in the configuration file."
-run = "pip install headroom-ai[all]"

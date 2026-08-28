@@ -6,7 +6,7 @@ start-at-login = true
 exec-on-workspace-change = [
   '/bin/bash',
   '-c',
-  'sketchybar --trigger aerospace_workspace_change',
+  '/run/current-system/sw/bin/sketchybar --trigger aerospace_workspace_change',
 ]
 
 [gaps]

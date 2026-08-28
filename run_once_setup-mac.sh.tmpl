@@ -1,52 +1,13 @@
 #!/bin/bash
 
+# macOS settings that nix-darwin cannot manage.
+# Other macOS settings are managed by nix-darwin system.defaults:
+# ~/.local/share/chezmoi/nix/darwin/default.nix
+
 {{ if eq .chezmoi.os "darwin" }}
-# disable "press and hold" configuration
-defaults write -g ApplePressAndHoldEnabled -bool false
-
-# show files with their extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
-
-# show all extensions
-defaults write -g AppleShowAllExtensions -bool true
-
-# display the status bar on Finder
-defaults write com.apple.finder ShowStatusBar -bool true
-
-# display the path bar in Finder
-defaults write com.apple.finder ShowPathbar -bool true
-
-# display the battery level in machine's menu bar
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
-
-# disable correcting spellings
-defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
-defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
-defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
-defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
-
-# don't make .DS_Store files
+# don't make .DS_Store files on network shares
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# setup google's DN
+# setup google's DNS
 networksetup -setdnsservers Wi-Fi 2001:4860:4860::8844 2001:4860:4860::8888 8.8.4.4 8.8.8.8
-
-# dock setups
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock tilesize -int 36 && killall Dock
-
-# hide desktop files
-defaults write com.apple.finder CreateDesktop -boolean false
-
-for app in "Dock" \
-	"Finder" \
-	"SystemUIServer"; do
-	killall "${app}" &>/dev/null
-done
 {{ end }}
-
-# grouping windows per app
-defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
