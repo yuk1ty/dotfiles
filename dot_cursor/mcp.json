@@ -1,0 +1,15 @@
+{
+	"mcpServers": {
+		"headroom": {
+			"type": "stdio",
+			"command": "headroom",
+			"args": ["mcp", "serve"]
+		},
+		"kotlin-lsmcp": {
+			"command": "kotlin-lsmcp",
+			"env": {
+				"KOTLIN_LSMCP_ALLOW_INDEXING": "1"
+			}
+		}
+	}
+}
