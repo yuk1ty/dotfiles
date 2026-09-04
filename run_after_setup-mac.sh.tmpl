@@ -8,6 +8,9 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write -g KeyRepeat -int 2
 defaults write -g InitialKeyRepeat -int 15
 
+# use F1, F2, etc. as standard function keys (System Settings > Keyboard > Function Keys)
+defaults write -g com.apple.keyboard.fnState -bool true
+
 # show files with their extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
