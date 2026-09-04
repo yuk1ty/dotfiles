@@ -1,5 +1,7 @@
 theme = catppuccin-mocha
 
+title = " "
+
 window-padding-x = 20
 window-padding-y = 0,20
 window-padding-balance = true
