@@ -5,6 +5,11 @@ if ! type rustup > /dev/null 2>&1; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
+# Install homebrew
+if ! type brew > /dev/null 2>&1; then
+  curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+fi
+
 # Install tools managed by homebrew
 {{ if eq .chezmoi.os "darwin" }}
 if ! type xcode-select > /dev/null 2>&1; then
