@@ -61,4 +61,4 @@ pf = push --force-with-lease --force-if-includes origin HEAD
     external = difft
 
 [ghq]
-root = ~/github
+root = ~/repo
