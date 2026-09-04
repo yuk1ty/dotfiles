@@ -3,13 +3,9 @@ tap "aws/tap", trusted: true
 tap "filosottile/musl-cross", trusted: true
 tap "FelixKratz/formulae", trusted: true
 tap "getagentseal/codeburn", trusted: true
-tap "homebrew/bundle"
-tap "homebrew/cask-versions"
-tap "homebrew/cask-fonts"
 tap "jesseduffield/lazygit", trusted: true
 tap "versent/taps", trusted: true
 tap "datadog/lapdog", trusted: true
-tap "goreleaser/tap", trusted: true
 tap "JetBrains/utils", trusted: true
 tap "anomalyco/tap", trusted: true
 tap "sheeki03/tap", trusted: true
@@ -52,7 +48,6 @@ brew "glib"
 brew "gnu-sed"
 brew "pkg-config"
 brew "guile"
-brew "goreleaser/tap/goreleaser"
 brew "unbound"
 brew "grpcurl"
 brew "elixir"
@@ -125,7 +120,6 @@ cask "nikitabobko/tap/aerospace"
 cask "aws-vault"
 cask "bloomrpc"
 cask "caffeine"
-cask "chromium"
 cask "claude-code"
 cask "codex"
 cask "font-hack-nerd-font"
