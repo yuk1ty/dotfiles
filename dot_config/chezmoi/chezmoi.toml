@@ -1,3 +1,5 @@
+mode = "symlink"
+
 [git]
 autoCommit = true
 
