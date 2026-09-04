@@ -1,6 +1,6 @@
 git:
-  pagers:
-    - pager: delta --dark --paging=never
+  diffRenderers:
+    - command: delta --dark --paging=never
 gui:
   language: "en"
   showIcons: true
