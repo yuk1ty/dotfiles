@@ -4,6 +4,10 @@
 # disable "press and hold" configuration
 defaults write -g ApplePressAndHoldEnabled -bool false
 
+# keyboard repeat (lower is faster; 2 / 15 is the fastest System Settings slider)
+defaults write -g KeyRepeat -int 2
+defaults write -g InitialKeyRepeat -int 15
+
 # show files with their extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
@@ -36,10 +40,18 @@ networksetup -setdnsservers Wi-Fi 2001:4860:4860::8844 2001:4860:4860::8888 8.8.
 
 # dock setups
 defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock orientation -string left
 defaults write com.apple.dock tilesize -int 36 && killall Dock
 
 # hide desktop files
 defaults write com.apple.finder CreateDesktop -boolean false
+
+# disable natural scrolling: one global key covers both trackpad and mouse
+defaults write -g com.apple.swipescrolldirection -bool false
+
+# pointer tracking speed (System Settings > Mouse / Trackpad)
+defaults write -g com.apple.mouse.scaling -float 1
+defaults write -g com.apple.trackpad.scaling -float 1
 
 for app in "Dock" \
 	"Finder" \
