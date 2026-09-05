@@ -1,6 +1,8 @@
 # dotfiles
 
-yuk1ty's dotfiles.
+helloyuki's (GitHub ID: yuk1ty) dotfiles.
+
+![My desktop](eyecatch.png)
 
 ## Prerequisites
 
