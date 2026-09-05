@@ -62,3 +62,10 @@ pf = push --force-with-lease --force-if-includes origin HEAD
 
 [ghq]
 root = ~/repo
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
