@@ -11,17 +11,7 @@ node = "latest"
 terraform = ["1.15.8"]
 
 # Cargo Plugins
-"cargo:bp" = "latest"
-"cargo:cargo-wizard" = "latest"
-"cargo:cargo-make" = "latest"
-"cargo:cargo-machete" = "latest"
-"cargo:cargo-sort" = "latest"
-"cargo:cargo-features-manager" = "latest"
-"cargo:cargo-chef" = "latest"
 "cargo:mergiraf" = "latest"
-
-# Go Packages
-"go:github.com/d-kuro/gwq/cmd/gwq" = "latest"
 
 [settings]
 legacy_version_file_disable_tools = ["terraform"]
