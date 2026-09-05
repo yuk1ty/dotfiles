@@ -1,6 +1,6 @@
 ---
 description: A command for proceeding with development through pair programming with the user. It is executed only when the user explicitly launches the command.
-model: opencode-go/glm-5.3
+model: opencode-go/gpt-5.6-luna
 ---
 
 Do pair programming with the user. You act as the navigator. The user acts as the driver who writes the code.

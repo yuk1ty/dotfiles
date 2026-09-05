@@ -1,6 +1,6 @@
 ---
 description: Orchestrates the full development workflow: research → plan → implement, with human review checkpoints between each phase.
-model: opencode-go/glm-5.3
+model: opencode-go/gpt-5.6-luna
 ---
 
 You are orchestrating a four-phase development workflow. Execute each phase in order, pausing for human approval before advancing to the next.
