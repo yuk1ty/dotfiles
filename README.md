@@ -15,32 +15,14 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yuk1ty
 
 ## Set up GitHub access
 
-Firstly, generate a new SSH key ([Guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)):
-
 ```
-ssh-keygen -t ed25519 -f ~/.ssh/<filename>
+gh auth login
 ```
 
-Next, I should register the key to GitHub and my machine ([Guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)):
-
-Copy the pub key for pasting GitHub page:
+Then some prompts will be launched. Follow the instruction. After finished the authentication, then:
 
 ```
-pbcopy < ~/.ssh/<filename>.pub
-```
-
-And add the key to my machine
-
-```
-ssh-add ~/.ssh/<filename>
-ssh-add -l
-<show the list>
-```
-
-Finally, check if it works:
-
-```
-ssh -T git@github.com
+gh auth setup-git
 ```
 
 ## Spinning up my environment
@@ -65,8 +47,9 @@ I'm using `Brewfile` to manage what apps will be installed. Run the following co
 brew bundle
 ```
 
-## Install tpm and tmux theme
+## Install global mise dependencies
 
-In this repository, I use `tpm` to set up the colour and visual theme of tmux. Reloading `.tmux.conf` automatically every time you run `chezmoi apply` with some changes, but sometimes it doesn't update the configuration correctly.
-
-You might find an error with `signal 9` when you source `.tmux.conf`. In this case, you need to rerun tmux server with `(tmux) kill-server` and press `<prefix> + I` command. `<prefix>` is `Ctrl + t` in this repo.
+```
+mise trust
+mise install
+```
