@@ -44,6 +44,7 @@ networksetup -setdnsservers Wi-Fi 2001:4860:4860::8844 2001:4860:4860::8888 8.8.
 # dock setups
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock orientation -string left
+defaults write com.apple.dock expose-group-apps -bool true
 defaults write com.apple.dock tilesize -int 36 && killall Dock
 
 # auto-hide the menu bar
