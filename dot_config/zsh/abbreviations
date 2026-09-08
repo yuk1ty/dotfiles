@@ -1,5 +1,6 @@
 abbr "cl"="claude"
 abbr "cll"="lapdog claude"
+abbr "ca"="cursor-agent"
 abbr "cx"="codex"
 abbr "cz"="chezmoi"
 abbr "cza"="chezmoi apply"

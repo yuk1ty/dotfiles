@@ -72,6 +72,7 @@
       "Bash(gh api --method DELETE:*)"
     ]
   },
+  "model": "sonnet",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline",
@@ -100,7 +101,7 @@
     }
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "xhigh",
+  "effortLevel": "medium",
   "tui": "fullscreen",
   "theme": "dark",
   "editorMode": "vim",
