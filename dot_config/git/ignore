@@ -4,8 +4,6 @@ node_modules/
 .mise.toml
 .mise.local.toml
 **/.claude/settings.local.json
-**/.claude/user/
-**/.opencode/user/
 **/.serena
 **/.mcp.json
 **/.agents/docs/

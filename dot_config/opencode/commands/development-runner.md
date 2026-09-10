@@ -30,11 +30,11 @@ After the subagent completes, follow the **Annotation Review** procedure above, 
 
 ### Step 3-1: Task Decomposition
 
-Use the `Task` tool with `subagent_type: task-decomposer` to launch the task-decomposer agent. Pass the path to the implementation plan (`.opencode/user/plan/`) as context.
+Use the `Task` tool with `subagent_type: task-decomposer` to launch the task-decomposer agent. Pass the path to the implementation plan (`.agents/docs/{concise-title}/plan.md`) as context.
 
 ### Step 3-2: Task Execution
 
-After the decomposer subagent completes, use the `Task` tool with `subagent_type: task-runner` to launch the task-runner agent. Pass the path to the task graph (`.opencode/plan/task-graph.md`) as context.
+After the decomposer subagent completes, use the `Task` tool with `subagent_type: task-runner` to launch the task-runner agent. Pass the path to the task graph (`.agents/docs/{concise-title}/task-graph.md`) as context.
 
 After all task agents complete, switch to the branch created by the task-runner.
 
@@ -53,8 +53,8 @@ Once approved, proceed to Phase 5.
 Use the `Task` tool to spawn a subagent with the following prompt:
 
 > Compare the actual implementation on the current branch against the documents produced in earlier phases:
-> - Research document: `.opencode/user/research/`
-> - Implementation plan: `.opencode/user/plan/`
+> - Research document: `.agents/docs/{concise-title}/research.md`
+> - Implementation plan: `.agents/docs/{concise-title}/plan.md`
 >
 > Identify any discrepancies — features added, removed, or changed during implementation that are not reflected in the documents. For each discrepancy found, update the relevant document to match the actual implementation.
 >

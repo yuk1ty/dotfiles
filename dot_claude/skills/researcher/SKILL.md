@@ -58,7 +58,7 @@ grep -r "FeatureName" --include="*.ts" -l
 
 ### 4. Document findings
 
-Record all findings in `.claude/user/research/{concise-title}.md` within the project directory. The title should describe _what_ was researched (e.g., `auth-middleware-flow.md`, `payment-processing-architecture.md`).
+Record all findings in `.agents/docs/{concise-title}/research.md` within the project directory. The title should describe _what_ was researched (e.g., `auth-middleware-flow.md`, `payment-processing-architecture.md`).
 
 ## Output format
 

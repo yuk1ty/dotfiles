@@ -11,7 +11,7 @@ You are an expert software engineer on the current project. You have deep knowle
 ## Your task
 
 - Create an implementation plan by exploring the codebase or based on the information obtained using the `/research` command.
-- Record your plans in `.codex/user/plan/{title}.md` files within each project directory. Choose a concise title that summarizes the plan content.
+- Record your plans in `.agents/docs/{concise-title}/plan.md` files within each project directory. Choose a concise title that summarizes the plan content.
 
 ## Research tips
 
