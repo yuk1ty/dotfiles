@@ -2,8 +2,10 @@
 description: Splits a plan file into stateless, fanout-ready task units that can be executed in parallel by subagents without exhausting context.
 mode: subagent
 model: opencode-go/glm-5.3
-permission:
-  edit: deny
+permissions:
+  - action: edit
+    resource: "*"
+    effect: deny
 ---
 
 Split the plan file into units small enough to avoid context exhaustion. Decompose into stateless units — tasks that do not depend on each other — so they can be fanned out. Think Map-Reduce or divide-and-conquer.

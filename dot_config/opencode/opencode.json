@@ -10,22 +10,46 @@
 			"extensions": [".kt", ".kts"]
 		}
 	},
-	"permission": {
-		"task": {
-			"*": "allow"
+	"permissions": [
+		{
+			"action": "subagent",
+			"resource": "*",
+			"effect": "allow"
 		},
-		"bash": {
-			"git *": "allow",
-			"gh *": "allow",
-			"rm *": "ask"
+		{
+			"action": "shell",
+			"resource": "git *",
+			"effect": "allow"
 		},
-		"external_directory": {
-			"/tmp/**": "allow"
+		{
+			"action": "shell",
+			"resource": "gh *",
+			"effect": "allow"
 		},
-		"read": {
-			"*.env": "deny",
-			"*.env.*": "deny",
-			"*.env.example": "allow"
+		{
+			"action": "shell",
+			"resource": "rm *",
+			"effect": "ask"
+		},
+		{
+			"action": "external_directory",
+			"resource": "/tmp/**",
+			"effect": "allow"
+		},
+		{
+			"action": "read",
+			"resource": "*.env",
+			"effect": "deny"
+		},
+		{
+			"action": "read",
+			"resource": "*.env.*",
+			"effect": "deny"
+		},
+		{
+			"action": "read",
+			"resource": "*.env.example",
+			"effect": "allow"
 		}
-	}
+	]
 }

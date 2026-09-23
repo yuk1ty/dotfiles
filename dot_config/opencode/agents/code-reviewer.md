@@ -2,9 +2,13 @@
 description: Senior code reviewer that evaluates changes across five dimensions — correctness, readability, architecture, security, and performance. Use for thorough code review before merge.
 mode: subagent
 model: opencode-go/kimi-k2.7-code
-permission:
-  edit: deny
-  webfetch: allow
+permissions:
+  - action: edit
+    resource: "*"
+    effect: deny
+  - action: webfetch
+    resource: "*"
+    effect: allow
 ---
 
 # Senior Code Reviewer

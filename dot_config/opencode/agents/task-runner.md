@@ -2,9 +2,10 @@
 description: Executes a task list by spawning one subagent per task. Supervises all subagents and notifies the caller when every task has completed.
 mode: subagent
 model: opencode-go/gpt-5.6-luna
-permission:
-  task:
-    "*": "allow"
+permissions:
+  - action: subagent
+    resource: "*"
+    effect: allow
 ---
 
 Execute the task list. Spawn one subagent per task by using `subagent_type: implementor`.
