@@ -55,17 +55,23 @@ local function resolve_target()
   end
   local self_pane = vim.env.HERDR_PANE_ID
 
-  local list, err = herdr_json { "pane", "list" }
+  -- Since herdr 0.9, `agent list` is the authoritative view of coding
+  -- agents.  A pane can contain an agent without the pane-list projection
+  -- carrying the agent metadata, so looking only at `pane list` can make an
+  -- otherwise valid target disappear.
+  local list, err = herdr_json { "agent", "list" }
   if not list then
     vim.notify("herdr: " .. err, vim.log.levels.ERROR)
     return nil
   end
 
-  local panes = (list.result or {}).panes or {}
-  -- The first pane in list order that is a coding agent (has an `agent`
-  -- field), lives in our tab, and is not ourselves.
-  for _, pane in ipairs(panes) do
-    if pane.tab_id == tab_id and pane.agent ~= nil and pane.pane_id ~= self_pane then return pane, file end
+  local agents = (list.result or {}).agents or {}
+  -- `agent list` contains only coding-agent panes.  Match the tab explicitly
+  -- because the command's result covers the whole herdr session.
+  for _, agent in ipairs(agents) do
+    if agent.tab_id == tab_id and agent.pane_id ~= self_pane then
+      return agent, file
+    end
   end
 
   vim.notify("herdr: no coding agent found in the current tab", vim.log.levels.WARN)
@@ -79,7 +85,7 @@ local function send_path(range)
   local target, file = resolve_target()
   if not target then return end
 
-  local payload = "@" .. relativize(file, target.cwd)
+  local payload = "@" .. relativize(file, target.cwd or target.foreground_cwd)
   if range then
     local s, e = range[1], range[2]
     if s > e then
@@ -98,7 +104,8 @@ local function send_path(range)
     return
   end
 
-  vim.notify(("herdr: sent %s to %s (%s)"):format(payload, target.agent, target.pane_id), vim.log.levels.INFO)
+  local agent_name = target.agent or target.display_agent or target.name or "agent"
+  vim.notify(("herdr: sent %s to %s (%s)"):format(payload, agent_name, target.pane_id), vim.log.levels.INFO)
 end
 
 --- Send the current buffer's file path to the first coding agent in this tab.
