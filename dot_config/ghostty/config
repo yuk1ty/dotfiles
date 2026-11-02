@@ -5,8 +5,8 @@ title = " "
 window-padding-x = 20
 window-padding-y = 0,20
 window-padding-balance = true
-background-opacity = 0.7
-background-blur-radius = macos-glass-regular
+background-opacity = 0.95
+background-blur-radius = macos-glass-clear
 macos-titlebar-style = transparent
 
 font-feature = -dlig
