@@ -8,7 +8,7 @@ node = "latest"
 1password-cli = "2.32.0"
 
 # IaC
-terraform = ["1.15.8"]
+terraform = ["1.17"]
 
 # Cargo Plugins
 "cargo:mergiraf" = "latest"
