@@ -1,5 +1,0 @@
-[naming]
-template = '{{.Host}}/{{.Owner}}/{{.Repository}}={{.Branch}}'
-
-[worktree]
-basedir = '~/github'
