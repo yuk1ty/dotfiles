@@ -117,8 +117,8 @@ if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-if.app-id = 'com.anthropic.claudefordesktop'
-run = 'move-node-to-workspace C'
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
@@ -141,16 +141,12 @@ if.app-id = 'com.jetbrains.intellij'
 run = 'move-node-to-workspace I'
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
-run = 'move-node-to-workspace E'
-
-[[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
 run = 'move-node-to-workspace E'
 
 [[on-window-detected]]
-if.app-id = 'com.teamflowhq.desktopApp'
-run = 'move-node-to-workspace S'
+if.app-id = 'com.anysphere.sand' # Grok Bot
+run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
